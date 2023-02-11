@@ -8,7 +8,7 @@ const Navbar = (props) => {
   return (
     <div className="flex flex-col">
 
-      <div className="bg-[#001229] text-white pt-3 p-2 flex flex-row relative items-center align-center">
+      <div className="z-10 bg-[#001229] h-20 text-white pt-3 p-2 flex flex-row relative items-center align-center">
        <TbVinyl className="text-[#006FFF] w-12 h-12 ml-2 lg:ml-5 lg:w-16 lg:h-16 pr-2 "/>
         <h1 className=" text-[#006FFF] font-extrabold text-2xl tracking-widest">
           Vinilio</h1>
@@ -35,14 +35,14 @@ const Navbar = (props) => {
         </button>     
       </div>
 
-      <div className={props.navbarOpen ?  "pt-10 gap-5 flex flex-col px-5 lg:hidden bg-[#001229] h-screen text-white pointer-events-auto opacity-100 transition-all duration-300" : "pt-10 gap-5 flex flex-col px-5 bg-[#001229] h-screen text-white pointer-events-none opacity-0 transition-all duration-300"}>
-        <div className={props.navbarOpen ? "transition-all duration-[200ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-4rem] text-2xl font-bold tracking-wide"}>About<AiOutlineDown className="inline pl-2 text-2xl font-bold"/></div>
-        <div className={props.navbarOpen ? "transition-all duration-[300ms] ml-2" : "transition-all duration-500 translate-y-[-3rem] ml-2"}>Features</div>
-        <div className={props.navbarOpen ? "transition-all duration-[400ms] ml-2" : "transition-all duration-500 translate-y-[-4rem] ml-2"}>Pricing</div>
-        <div className={props.navbarOpen ? "transition-all duration-[500ms] ml-2" : "transition-all duration-500 translate-y-[-5rem] ml-2"}>Testimonials</div>
-        <div className={props.navbarOpen ? "transition-all duration-[600ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-6rem] text-2xl font-bold tracking-wide"}>FAQ</div>
-        <div className={props.navbarOpen ? "transition-all duration-[700ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-7rem] text-2xl font-bold tracking-wide"}>Contact us</div>
-        <div className={props.navbarOpen ? "transition-all duration-[800ms] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-8rem] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide"}>Start free trial</div>
+      <div className={props.navbarOpen ?  "absolute w-full gap-5 flex flex-col px-5 lg:hidden bg-[#001229] h-screen text-white pointer-events-auto opacity-100 transition-all duration-[600ms]" : "absolute w-full bg-[#001229] gap-5 flex flex-col px-5 h-screen text-white pointer-events-none opacity-0 transition-all duration-[600ms]"}>
+        <div className={props.navbarOpen ? "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide" : "transition-all duration-[200ms] translate-y-[-4rem] text-2xl font-bold tracking-wide"}>About<AiOutlineDown className="inline pl-2 text-2xl font-bold"/></div>
+        <div className={props.navbarOpen ? "transition-all duration-[300ms] ml-2" : "transition-all duration-[300ms] translate-y-[-1rem] ml-2"}>Features</div>
+        <div className={props.navbarOpen ? "transition-all duration-[400ms] ml-2" : "transition-all duration-[400ms] translate-y-[-4rem] ml-2"}>Pricing</div>
+        <div className={props.navbarOpen ? "transition-all duration-[500ms] ml-2" : "transition-all duration-[500ms] translate-y-[-5rem] ml-2"}>Testimonials</div>
+        <div className={props.navbarOpen ? "transition-all duration-[600ms] text-2xl font-bold tracking-wide" : "transition-all duration-[600ms] translate-y-[-6rem] text-2xl font-bold tracking-wide"}>FAQ</div>
+        <div className={props.navbarOpen ? "transition-all duration-[700ms] text-2xl font-bold tracking-wide" : "transition-all duration-[700ms] translate-y-[-7rem] text-2xl font-bold tracking-wide"}>Contact us</div>
+        <div className={props.navbarOpen ? "transition-all duration-[800ms] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide" : "transition-all duration-[800ms] translate-y-[-8rem] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide"}>Start free trial</div>
 
       </div>
 
