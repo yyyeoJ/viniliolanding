@@ -9,9 +9,10 @@ function App() {
   const [navbarOpen,setNavbarOpen] = useState(false);
 
   return (
-    <div className={navbarOpen ? "App bg-[#001229] fixed w-full" : "App bg-[#001229]"}>
+    <div className={navbarOpen ? "App bg-[#001229] fixed lg:relative w-full" : "App bg-[#001229]"}>
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen}/>
-        <Hero />
+        <Hero /> 
+        <div className="text-white">asd</div>
         
     </div>
   )
