@@ -3,10 +3,7 @@ import {TbVinyl} from "react-icons/tb"
 import {BsDashLg} from "react-icons/bs"
 import {AiOutlineDown} from "react-icons/ai"
 
-const Navbar = () => {
-
-  const [navbarOpen,setNavbarOpen] = useState(false);
-
+const Navbar = (props) => {
 
   return (
     <div className="flex flex-col">
@@ -31,21 +28,21 @@ const Navbar = () => {
            <li className="cursor-pointer bg-white hover:bg-gray-400 transition-all duration-300 p-2 text-black rounded-lg px-5 text-xl font-bold tracking-wide">Start free trial</li>
         </ul>
         <button className="cursor-pointer flex flex-col lg:hidden absolute right-5 text-2xl text-white"
-                onClick={()=>{setNavbarOpen(!navbarOpen)}}>
-          <BsDashLg  className={navbarOpen ? "relative top-6 rotate-45 transition-all duration-500" : "relative top-4 transition-all duration-500"}/>
-          <BsDashLg className={navbarOpen ? "transition-all duration-500 opacity-0 translate-x-[-1rem]" : "transition-all duration-500"}/>
-          <BsDashLg className={navbarOpen ? "relative bottom-6 rotate-[-45deg] transition-all duration-500" : "relative bottom-4 transition-all duration-500"}/>
+                onClick={()=>{props.setNavbarOpen(!props.navbarOpen)}}>
+          <BsDashLg  className={props.navbarOpen ? "relative top-6 rotate-45 transition-all duration-500" : "relative top-4 transition-all duration-500"}/>
+          <BsDashLg className={props.navbarOpen ? "transition-all duration-500 opacity-0 translate-x-[-1rem]" : "transition-all duration-500"}/>
+          <BsDashLg className={props.navbarOpen ? "relative bottom-6 rotate-[-45deg] transition-all duration-500" : "relative bottom-4 transition-all duration-500"}/>
         </button>     
       </div>
 
-      <div className={navbarOpen ?  "pt-10 gap-5 flex flex-col px-5 lg:hidden bg-[#001229] h-screen text-white pointer-events-auto opacity-100 transition-all duration-300" : "pt-10 gap-5 flex flex-col px-5 bg-[#001229] h-screen text-white pointer-events-none opacity-0 transition-all duration-300"}>
-        <div className={navbarOpen ? "transition-all duration-[200ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-4rem] text-2xl font-bold tracking-wide"}>About<AiOutlineDown className="inline pl-2 text-2xl font-bold"/></div>
-        <div className={navbarOpen ? "transition-all duration-[300ms] ml-2" : "transition-all duration-500 translate-y-[-3rem] ml-2"}>Features</div>
-        <div className={navbarOpen ? "transition-all duration-[400ms] ml-2" : "transition-all duration-500 translate-y-[-4rem] ml-2"}>Pricing</div>
-        <div className={navbarOpen ? "transition-all duration-[500ms] ml-2" : "transition-all duration-500 translate-y-[-5rem] ml-2"}>Testimonials</div>
-        <div className={navbarOpen ? "transition-all duration-[600ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-6rem] text-2xl font-bold tracking-wide"}>FAQ</div>
-        <div className={navbarOpen ? "transition-all duration-[700ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-7rem] text-2xl font-bold tracking-wide"}>Contact us</div>
-        <div className={navbarOpen ? "transition-all duration-[800ms] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-8rem] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide"}>Start free trial</div>
+      <div className={props.navbarOpen ?  "pt-10 gap-5 flex flex-col px-5 lg:hidden bg-[#001229] h-screen text-white pointer-events-auto opacity-100 transition-all duration-300" : "pt-10 gap-5 flex flex-col px-5 bg-[#001229] h-screen text-white pointer-events-none opacity-0 transition-all duration-300"}>
+        <div className={props.navbarOpen ? "transition-all duration-[200ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-4rem] text-2xl font-bold tracking-wide"}>About<AiOutlineDown className="inline pl-2 text-2xl font-bold"/></div>
+        <div className={props.navbarOpen ? "transition-all duration-[300ms] ml-2" : "transition-all duration-500 translate-y-[-3rem] ml-2"}>Features</div>
+        <div className={props.navbarOpen ? "transition-all duration-[400ms] ml-2" : "transition-all duration-500 translate-y-[-4rem] ml-2"}>Pricing</div>
+        <div className={props.navbarOpen ? "transition-all duration-[500ms] ml-2" : "transition-all duration-500 translate-y-[-5rem] ml-2"}>Testimonials</div>
+        <div className={props.navbarOpen ? "transition-all duration-[600ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-6rem] text-2xl font-bold tracking-wide"}>FAQ</div>
+        <div className={props.navbarOpen ? "transition-all duration-[700ms] text-2xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-7rem] text-2xl font-bold tracking-wide"}>Contact us</div>
+        <div className={props.navbarOpen ? "transition-all duration-[800ms] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide" : "transition-all duration-500 translate-y-[-8rem] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide"}>Start free trial</div>
 
       </div>
 
