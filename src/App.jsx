@@ -6,13 +6,15 @@ import Navbar from './components/Navbar'
 
 function App() {
 
+
+  //<a href="https://storyset.com/app">App illustrations by Storyset</a>
+
   const [navbarOpen,setNavbarOpen] = useState(false);
 
   return (
     <div className={navbarOpen ? "App bg-[#001229] fixed lg:relative w-full" : "App bg-[#001229]"}>
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen}/>
-        <Hero /> 
-        <div className="text-white">asd</div>
+        <Hero navbarOpen={navbarOpen} /> 
         
     </div>
   )
