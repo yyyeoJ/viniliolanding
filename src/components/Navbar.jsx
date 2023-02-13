@@ -9,9 +9,13 @@ const Navbar = (props) => {
     <div className="flex flex-col">
 
       <div className={props.navbarOpen ? "z-40 bg-[#001229] xl:bg-gradient-to-b xl:from-[#00204a] xl:to-[#001229] h-20 text-white pt-3 p-2 flex flex-row relative items-center align-center transition-all duration-300" : "z-40 bg-gradient-to-b from-[#00204a] h-20 text-white pt-3 p-2 flex flex-row relative items-center align-center transition-all duration-300"}>
-       <TbVinyl className="animate-appearFromUp text-[#006FFF] w-12 h-12 ml-2 xl:ml-5 xl:w-16 xl:h-16 pr-2 "/>
-        <h1 className="animate-appearFromUp text-[#006FFF] font-extrabold text-2xl tracking-widest">
-          Vinilio</h1>
+       
+       <div onClick={()=>{props.setButtonClicked(false)}} className={props.navbarOpen ? "pointer-events-none flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]" : "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]"}>
+        <TbVinyl className="w-12 h-12 ml-2 xl:ml-5 xl:w-16 xl:h-16 pr-2 "/>
+          <h1 className="font-extrabold text-2xl tracking-widest">
+            Vinilio</h1>
+       </div>
+
         <ul className="text-white hidden xl:flex flex-row gap-5 items-center absolute right-14 ">
            <li>
               <div className="group h-14 relative top-[5px]">
