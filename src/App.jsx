@@ -14,7 +14,8 @@ function App() {
   const [herobuttonClicked,setHerobuttonClicked] = useState(false);
 
   return (
-    <div className={navbarOpen ? "App bg-[#001229] fixed lg:relative w-full" : "App bg-[#001229]"}>
+    <div className={navbarOpen ? "App bg-[#001229] fixed lg:relative w-full" 
+                               : "App bg-[#001229]"}>
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Hero navbarOpen={navbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked} /> 
         <Features />
