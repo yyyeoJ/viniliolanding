@@ -10,15 +10,27 @@ function App() {
 
   //<a href="https://storyset.com/app">App illustrations by Storyset</a>
 
+  /*
+    Breakpoints:
+        "p" :{"max":"415px"},                    Phone
+        "tp" : {"min":"416px"},                  Tablet protrait/phone landscape
+        "tl" : {"min":"712px","max":"1024px"},   Tablet landscape
+        "ds" : {"min":"1280px","max":"1919px"},  Desktop small
+        "dl" : {"min":"1920px"}                 Desktop large
+
+  */
+
+
+
   const [navbarOpen,setNavbarOpen] = useState(false);
   const [herobuttonClicked,setHerobuttonClicked] = useState(false);
 
   return (
-    <div className={navbarOpen ? "App bg-[#001229] fixed lg:relative w-full" 
-                               : "App bg-[#001229]"}>
+    <div className={navbarOpen ? "App bg-[#001229] overflow-x-hidden overflow-y-visible" 
+                               : "App bg-[#001229] overflow-x-hidden overflow-y-visible"}>
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
-        <Hero navbarOpen={navbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked} /> 
-        <Features />
+        <Hero navbarOpen={navbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked} />
+        {/*<Features />*/}
         
     </div>
   )

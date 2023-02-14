@@ -6,6 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        "ps" : {"max":"414px"},
+        "p" : {"min":"415px"},
+        "tp" : {"min":"480px"},
+        "tl" : {"min":"1024px"},
+        "ds" : {"min":"1280px"},
+        "dl" : {"min":"1920px"}
+      },
       animation:{
         "appearFromUp" : "appearFromUp 1s linear",
         "appearFromLeft" : "appearFromLeft 1s linear",
