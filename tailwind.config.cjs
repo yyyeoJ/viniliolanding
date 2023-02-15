@@ -16,6 +16,7 @@ module.exports = {
       },
       animation:{
         "appearFromUp" : "appearFromUp 1s linear",
+        "appearFromDown" : "appearFromDown 0.5s linear",
         "appearFromLeft" : "appearFromLeft 1s linear",
         "appearFromRight" : "appearFromRight 1s linear"
 
@@ -23,6 +24,10 @@ module.exports = {
       keyframes:{
         appearFromUp: {
           "0%":{"transform" : "translatey(-1rem)","opacity" : "0%"},
+          "100%":{"transform" : "translatey(0rem)", "opacity" : "100%"}
+        },
+        appearFromDown: {
+          "0%":{"transform" : "translatey(2rem)","opacity" : "0%"},
           "100%":{"transform" : "translatey(0rem)", "opacity" : "100%"}
         },
         appearFromLeft : {

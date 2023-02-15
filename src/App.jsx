@@ -26,12 +26,12 @@ function App() {
   const [herobuttonClicked,setHerobuttonClicked] = useState(false);
 
   return (
-    <div className={navbarOpen ? "App bg-[#001229] overflow-x-hidden overflow-y-visible" 
-                               : "App bg-[#001229] overflow-x-hidden overflow-y-visible"}>
+    <div className="app bg-[#b5bbc4] overflow-x-hidden">
+
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
-        <Hero navbarOpen={navbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked} />
-        {/*<Features />*/}
-        
+        <Hero navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
+        <Features navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
+
     </div>
   )
 }
