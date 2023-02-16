@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import Statscounter from './components/Statscounter';
 import Hero from './components/Hero';
@@ -27,13 +27,15 @@ function App() {
   const [navbarOpen,setNavbarOpen] = useState(false);
   const [herobuttonClicked,setHerobuttonClicked] = useState(false);
 
+
+
   return (
-    <div className="app bg-[#b5bbc4] ">
+    <div className="app bg-[#b5bbc4] overflow-x-hidden">
 
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
-        <Hero buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
+        <Hero  buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Statscounter />
-        <Features />
+        <Features/>
 
       
 

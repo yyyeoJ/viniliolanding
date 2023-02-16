@@ -70,7 +70,7 @@ const Statscounter = () => {
 
   return (
 
-    <div className="w-[99vw] pb-[5vh] pt-[31.5vh] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
+    <div className="w-[99vw] pb-[20vh] pt-[31.5vh] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
 
       <div    ref={counterRef} className="opacity-0 transition-all flex flex-col tp:flex-row gap-[1rem] dl:gap-[3rem] w-[100vw] justify-center items-center flex-wrap text-white font-bold">
         <div    ref={songsRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-[#203147] w-[16rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{songs}M+</div><div className="   text-3xl dl:text-4xl">Songs</div></div>

@@ -13,8 +13,7 @@ const Features = () => {
         entries=>{
           const entry = entries[0]
           if(entry.isIntersecting){
-            featuresRef.current.className = "animate-appearFromDown transition-all duration-500 h-[100rem] w-[99vw] relative overflow-x-scroll overflow-y-hidden"
-            console.log("intersecting")
+            featuresRef.current.className = " border-4 animate-appearFromDown transition-all duration-500 h-[62rem] w-[99vw] relative overflow-x-scroll overflow-y-hidden"
             cardObserver.unobserve(cardRef.current)
             
           }
@@ -29,8 +28,8 @@ const Features = () => {
 
   return (
 
-    <div ref={featuresRef} className="opacity-0 transition-all duration-1000 h-[100rem] w-[99vw] relative overflow-x-scroll overflow-y-hidden ">
-      <div className="flex flex-row gap-[2rem] left-0 top-[10rem] absolute pl-[30vw] pr-[5rem]">
+    <div ref={featuresRef} className="opacity-0 transition-all duration-1000 h-[62rem] w-[99vw] relative overflow-x-scroll overflow-y-hidden ">
+      <div className="flex flex-row gap-[2rem] left-0  absolute pl-[30vw] pr-[5rem]">
           {/* Feature Card */}
           <div ref={cardRef} className=" h-[62rem] w-[30rem] flex flex-col items-center  bg-[#203147] shadow-black shadow-md rounded-[1.5rem]">
               <div className="-[25em] mt-[2rem] rounded-full bg-[white] overflow-hidden">
