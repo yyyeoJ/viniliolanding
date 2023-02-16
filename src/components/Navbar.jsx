@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {TbVinyl} from 'react-icons/tb'
 import { BsDashLg } from 'react-icons/bs'
 
 
 
 const Navbar = (props) => {
+
+const [anchor,setAnchor] = useState()
+
+
+
+
   return (
 
-    <nav className={props.navbarOpen ? "bg-[#001229] z-40 w-full fixed top-0 h-[4rem] flex" : "bg-gradient-to-b from-[#00204a] to-[#001229] z-40 w-full fixed top-0 h-[4rem] flex"}>
+    <nav className={props.navbarOpen ? "bg-[#001229] z-40 w-[100vw] fixed top-0 h-[4rem] flex overlfow-x-hidden" : "bg-gradient-to-b from-[#00204a] to-[#001229] z-40 w-[100vw]  fixed top-0 h-[4rem] flex"}>
         <div className="flex items-center justify-between w-full dl:w-[80%] px-[2rem] mx-auto">
             {/*Logo */}
-            <div onClick={()=>{props.setButtonClicked(false)}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
+            <div onClick={()=>{}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
                                                                                         : "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]"}>
+                
                 <TbVinyl className="w-12 h-12 ml-2 pr-2 "/>
                 <h1 className="font-extrabold text-2xl tracking-widest">Vinilio</h1>
             </div>
@@ -37,7 +44,7 @@ const Navbar = (props) => {
                         </div>
                         </div>
                     </li>           
-                    <li className="animate-appearFromUp cursor-pointer bg-white hover:bg-gray-400 transition-all duration-300 p-2 text-black rounded-lg px-5 text-xl font-bold tracking-wide">Start free trial</li>
+                    <li className="animate-appearFromUp cursor-pointer bg-white hover:bg-gray-400 transition-all duration-300 p-2 text-black rounded-lg px-5 text-xl font-bold tracking-wide">Start listening</li>
             </ul>
             {/*Mobile nav */}
                 {/*Button */}
@@ -74,7 +81,7 @@ const Navbar = (props) => {
 
 
                         <div className={props.navbarOpen ? "transition-all duration-[1000ms] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide" 
-                                            : "transition-all duration-[500ms]  bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide translate-y-[-25rem]"}>Start free trial</div>
+                                            : "transition-all duration-[500ms]  bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide translate-y-[-25rem]"}>Start listening</div>
 
                 </div>
         </div>

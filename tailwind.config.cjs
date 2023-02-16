@@ -15,6 +15,8 @@ module.exports = {
         "dl" : {"min":"1920px"}
       },
       animation:{
+        "hero2" : "hero2 0.3s linear",
+        "hero1" : "hero1 0.3s linear",
         "appearFromUp" : "appearFromUp 1s linear",
         "appearFromDown" : "appearFromDown 0.5s linear",
         "appearFromLeft" : "appearFromLeft 1s linear",
@@ -22,6 +24,14 @@ module.exports = {
 
       },
       keyframes:{
+        hero1:{
+          "0%": {"transform" : "translatex(-100vw)"},
+          "100%": {"transform" : "translatex(0vw)"},
+        },
+        hero2:{
+          "0%": {"transform" : "translatex(100vw)"},
+          "100%": {"transform" : "translatex(0vw)"},
+        },
         appearFromUp: {
           "0%":{"transform" : "translatey(-1rem)","opacity" : "0%"},
           "100%":{"transform" : "translatey(0rem)", "opacity" : "100%"}

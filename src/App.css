@@ -9,6 +9,7 @@ body,
     height: 100%;
     background-color: #000e21;
     @apply text-white;
+    scroll-behavior: smooth;
 }
 
 /* width */
