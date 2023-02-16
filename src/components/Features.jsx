@@ -4,6 +4,10 @@ const Features = () => {
 
 
   const counterRef = useRef();
+  const songsRef = useRef();
+  const artistsRef = useRef();
+  const genresRef = useRef();
+  const playlistRef = useRef();
 
 
   const [songs,setSongs] = useState(70)
@@ -13,19 +17,27 @@ const Features = () => {
 
 
   useEffect(()=>{
-    const counterObserver = new IntersectionObserver(
-      entries=>{
-        const entry = entries[0]
-        if(entry.isIntersecting){
-          counterRef.current.className = "animate-appearFromDown py-[10vh] opacity-100 transition-all duration-1000 flex flex-row gap-[2rem] w-[100vw] justify-center flex-wrap text-white font-bold"
-          counterObserver.unobserve(counterRef.current)
-          countUp()
-          
-        }
-      },
-      {threshold:0.8})
+    setTimeout(()=>{
+      const counterObserver = new IntersectionObserver(
+        entries=>{
+          const entry = entries[0]
+          if(entry.isIntersecting){
+            counterRef.current.className = "opacity-100 transition-all duration-1000 flex flex-col tp:flex-row items-center gap-[1rem] dl:gap-[3rem] w-[100vw] justify-center flex-wrap text-white font-bold"
+            songsRef.current.className =   "opacity-100 animate-appearFromLeft  tp:animate-appearFromUp transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-[#203147] w-[16rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+            artistsRef.current.className = "opacity-100 animate-appearFromRight tp:animate-appearFromUp transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-[#203147] w-[16rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+            genresRef.current.className =  "opacity-100 animate-appearFromLeft  tp:animate-appearFromUp transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-[#203147] w-[16rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+            playlistRef.current.className ="opacity-100 animate-appearFromRight tp:animate-appearFromUp transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-[#203147] w-[16rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+            console.log("intersect")
+            counterObserver.unobserve(genresRef.current)
+            countUp()
+            
+          }
+        },
+        {threshold: 0.8})
+        counterObserver.observe(genresRef.current)
+    },1000)
+    
 
-    counterObserver.observe(counterRef.current)
   },[])
 
   function countUp(){
@@ -59,13 +71,13 @@ const Features = () => {
 
   return (
 
-    <div className="w-[100vw] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
+    <div className="w-[100vw] pb-[5vh] pt-[22vh] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
 
-      <div ref={counterRef} className="py-[10vh] opacity-0 transition-all duration-10 x00 flex flex-row gap-[2rem] w-[100vw] justify-center flex-wrap text-white font-bold">
-        <div className="flex flex-col justify-center items-center bg-[#203147] w-[15rem] shadow-black shadow-md p-[4rem] rounded-xl"><div className="text-6xl">{songs}M+</div><div className="text-3xl">Songs</div></div>
-        <div className="flex flex-col justify-center items-center bg-[#203147] w-[15rem] shadow-black shadow-md p-[4rem] rounded-xl"><div className="text-6xl">{artists}M+</div><div className="text-3xl">Artists</div></div>
-        <div className="flex flex-col justify-center items-center bg-[#203147] w-[15rem] shadow-black shadow-md p-[4rem] rounded-xl"><div className="text-6xl">{genres}+</div><div className="text-3xl">Genres</div></div>
-        <div className="flex flex-col justify-center items-center bg-[#203147] w-[15rem] shadow-black shadow-md p-[4rem] rounded-xl"><div className="text-6xl">{playlists}+</div><div className="text-3xl">Playlists</div></div>
+      <div    ref={counterRef} className="opacity-0 transition-all flex flex-col tp:flex-row gap-[1rem] dl:gap-[3rem] w-[100vw] justify-center items-center flex-wrap text-white font-bold">
+        <div    ref={songsRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-[#203147] w-[16rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{songs}M+</div><div className="   text-3xl dl:text-4xl">Songs</div></div>
+        <div  ref={artistsRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-[#203147] w-[16rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{artists}M+</div><div className=" text-3xl dl:text-4xl">Artists</div></div>
+        <div   ref={genresRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-[#203147] w-[16rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{genres}+</div><div className="   text-3xl dl:text-4xl">Genres</div></div>
+        <div ref={playlistRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-[#203147] w-[16rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{playlists}+</div><div className="text-3xl dl:text-4xl">Playlists</div></div>
         
       </div>
     </div>

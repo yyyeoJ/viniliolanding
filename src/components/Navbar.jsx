@@ -8,7 +8,7 @@ const Navbar = (props) => {
   return (
 
     <nav className={props.navbarOpen ? "bg-[#001229] z-40 w-full fixed top-0 h-[4rem] flex" : "bg-gradient-to-b from-[#00204a] to-[#001229] z-40 w-full fixed top-0 h-[4rem] flex"}>
-        <div className="flex items-center justify-between w-full px-[2rem] mx-auto">
+        <div className="flex items-center justify-between w-full dl:w-[80%] px-[2rem] mx-auto">
             {/*Logo */}
             <div onClick={()=>{props.setButtonClicked(false)}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
                                                                                         : "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]"}>
