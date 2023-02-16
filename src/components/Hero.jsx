@@ -7,7 +7,7 @@ const Hero = (props) => {
             {/* Hero1 */}
             <div className={props.buttonClicked ? "translate-x-[-100vw] transition-all duration-500 w-[100vw] flex flex-row justify-center items-center align-center text-white" 
                                                 : "translate-x-[0vw]    transition-all duration-500 w-[100vw] flex flex-row justify-center items-center align-center text-white"}>
-                <div className="flex flex-col tl:flex-row  items-center gap-2 dl:gap-[15rem]">
+                <div className="flex flex-col tl:flex-row  items-center gap-2 ds:gap-[5rem] dl:gap-[15rem]">
                     <img className="animate-appearFromLeft w-[30rem] ps:w-[15rem] tp:w-[30rem] tl:w-[35rem] dl:w-[45rem]" src="./src/assets/more-music-animate.svg"/>
                     <div className="flex flex-col items-center">
                         <div className="animate-appearFromRight font-bold text-[#006FFF] text-center text-[3rem] ps:text-[2.5rem] tp:text-[5rem] tl:text-[3rem] dl:text-[5rem]">For your ears</div>
@@ -21,7 +21,7 @@ const Hero = (props) => {
             {/* Hero2 */}
             <div className={props.buttonClicked ? "translate-x-[-100vw] transition-all duration-500 w-[100vw] flex flex-row justify-center items-center align-center text-white" 
                                                 : "translate-x-[0vw]    transition-all duration-500 w-[100vw] flex flex-row justify-center items-center align-center text-white"}>
-                <div className="flex flex-col tl:flex-row  items-center gap-2 dl:gap-[15rem] ">
+                <div className="flex flex-col tl:flex-row  items-center gap-2 ds:gap-[5rem] dl:gap-[15rem] ">
                     <img className="animate-appearFromLeft w-[30rem] ps:w-[15rem] tp:w-[35rem] tl:w-[35rem] dl:w-[45rem]" src="./src/assets/headphone-animate.svg"/>
                     <div className="flex flex-col items-center">
                         <div className="animate-appearFromRight font-bold text-[#006FFF] text-center text-[3rem] ps:text-[2.5rem] tp:text-[5rem] tl:text-[3rem] dl:text-[5rem]">For your ears</div>
