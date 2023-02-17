@@ -35,7 +35,11 @@ body,
 #features{
   -ms-overflow-style: none;
   scrollbar-width: none;
+  will-change: transform;
 }
 #features::-webkit-scrollbar {
   display: none;
+}
+#navbar{
+  will-change: transform;
 }

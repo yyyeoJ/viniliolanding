@@ -18,7 +18,7 @@ const Features = () => {
             
           }
         },
-        {threshold: 0.2})
+        {threshold: 0.69})
         cardObserver.observe(cardRef.current)
     },2000)
     
@@ -32,7 +32,7 @@ const Features = () => {
       <div className="flex flex-row gap-[2rem] left-0  absolute pl-[30vw] pr-[2rem]">
 
           {/* Feature Card */}
-          <div ref={cardRef} className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147] shadow-black shadow-md rounded-[1.5rem]">
+          <div ref={cardRef} className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147]  rounded-[1.5rem]">
               <div className="w-[12rem] h-[12rem] tp:w-[20rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
                 <img className=" rounded-[100%]  bg-[white]" src="./src/assets/online-world-animate.svg"/>
               </div>
@@ -41,7 +41,7 @@ const Features = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147] shadow-black shadow-md rounded-[1.5rem]">
+          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147]  rounded-[1.5rem]">
               <div className="w-[12rem] h-[12rem] tp:w-[20rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
                 <img className=" rounded-[100%]  bg-[white]" src="./src/assets/composer-music-animate.svg"/>
               </div>
@@ -50,7 +50,7 @@ const Features = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147] shadow-black shadow-md rounded-[1.5rem]">
+          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147]  rounded-[1.5rem]">
               <div className="w-[12rem] h-[12rem] tp:w-[20rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
                 <img className=" rounded-[100%]  bg-[white]" src="./src/assets/user-flow-animate.svg"/>
               </div>
@@ -59,7 +59,7 @@ const Features = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147] shadow-black shadow-md rounded-[1.5rem]">
+          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147]  rounded-[1.5rem]">
               <div className="w-[12rem] h-[12rem] tp:w-[20rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
                 <img className=" rounded-[100%]  bg-[white]" src="./src/assets/analyze-animate.svg"/>
               </div>
@@ -68,7 +68,7 @@ const Features = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147] shadow-black shadow-md rounded-[1.5rem]">
+          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147]  rounded-[1.5rem]">
               <div className="w-[12rem] h-[12rem] tp:w-[20rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
                 <img className=" rounded-[100%]  bg-[white]" src="./src/assets/rock-band-animate.svg"/>
               </div>
@@ -77,7 +77,7 @@ const Features = () => {
           </div>
           
           {/* Feature Card */}
-          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147] shadow-black shadow-md rounded-[1.5rem]">
+          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147]  rounded-[1.5rem]">
               <div className="w-[12rem] h-[12rem] tp:w-[20rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
                 <img className="w-[12rem] h-[12rem] tp:w-[20rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] rounded-[100%]  bg-[white]" src="./src/assets/karaoke-animate.svg"/>
               </div>
@@ -86,7 +86,7 @@ const Features = () => {
           </div>
 
           {/* Feature Card */}
-          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147] shadow-black shadow-md rounded-[1.5rem]">
+          <div className="ps:h-[35rem] ps:w-[15rem] p:w-[20rem] p:h-[35rem] tp:w-[30rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem]  flex flex-col items-center  bg-[#203147]  rounded-[1.5rem]">
               <div className="w-[12rem] h-[12rem] tp:w-[20rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
                 <img className=" rounded-[100%]  bg-[white]" src="./src/assets/podcast-audience-animate.svg"/>
               </div>

@@ -24,6 +24,10 @@ module.exports = {
 
       },
       keyframes:{
+        sponsor:{
+          "0%": {"transform" : "translatex(-100vw)"},
+          "100%": {"transform" : "translatex(0vw)"},
+        },
         hero1:{
           "0%": {"transform" : "translatex(-100vw)"},
           "100%": {"transform" : "translatex(0vw)"},
