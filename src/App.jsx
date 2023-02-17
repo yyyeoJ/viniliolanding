@@ -4,6 +4,7 @@ import Statscounter from './components/Statscounter';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar'
 import Features from './components/Features';
+import Sponsors from './components/Sponsors';
 
 
 function App() {
@@ -36,8 +37,7 @@ function App() {
         <Hero  buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Statscounter />
         <Features/>
-        <Statscounter />
-
+        <Sponsors />
 
       
 

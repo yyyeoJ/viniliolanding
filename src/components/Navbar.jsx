@@ -55,29 +55,29 @@ const Navbar = (props) => {
                 </button>     
                 {/*Opened */}
                 <div className={props.navbarOpen ? "fixed overflow-y-scroll pb-[8rem] right-0 bottom-0 bg-[#000e21] z-40 top-[4rem] w-full gap-5 flex flex-col px-[5rem] ds:hidden h-full text-white pointer-events-auto opacity-100 transition-all duration-[600ms]" 
-                                                 : "fixed overflow-y-scroll right-0 bottom-0 bg-[#000e21] z-40 top-[4rem] w-full gap-5 flex flex-col px-[5rem] ds:hidden h-[0rem]  text-white pointer-events-none opacity-0   transition-all duration-[600ms]"}>
+                                                 : "fixed overflow-y-scroll right-0 bottom-0 bg-[#000e21] z-40 top-[4rem] w-full gap-5 flex flex-col px-[5rem] ds:hidden h-[0rem]  text-white pointer-events-none opacity-100   transition-all duration-[600ms]"}>
 
                         <div className={props.navbarOpen ? "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide" 
-                                                        : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-2rem]"}>About</div>
+                                                        : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-32rem]"}>About</div>
                         <div className={props.navbarOpen ? "transition-all duration-[400ms] ml-2 translate-y-0" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-4rem]"}>Features</div>
+                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Features</div>
                         <div className={props.navbarOpen ? "transition-all duration-[400ms] ml-2" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-6rem]"}>Pricing</div>
+                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Pricing</div>
                         <div className={props.navbarOpen ? "transition-all duration-[500ms] ml-2" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-8rem]"}>Testimonials</div>
+                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Testimonials</div>
 
                         <div className={props.navbarOpen ? "pt-2  transition-all duration-[600ms] text-2xl font-bold tracking-wide" 
-                                                        : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-13rem]"}>Support</div>
+                                                        : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-20rem]"}>Support</div>
                         <div className={props.navbarOpen ? "transition-all duration-[700ms] ml-2 translate-y-0" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-15rem]"}>FAQ</div>
+                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>FAQ</div>
                         <div className={props.navbarOpen ? "transition-all duration-[800ms]      translate-y-0 ml-2" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-17rem]"}>Supported devices</div>
+                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Supported devices</div>
                         <div className={props.navbarOpen ? "transition-all duration-[900ms]      translate-y-0 ml-2" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-19rem]"}>Contact us</div>
+                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Contact us</div>
 
 
                         <div className={props.navbarOpen ? "transition-all duration-[1000ms] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide" 
-                                            : "transition-all duration-[500ms]  bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide translate-y-[-25rem]"}>Start listening</div>
+                                            : "transition-all duration-[500ms]  bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide translate-y-[-32rem]"}>Start listening</div>
 
                 </div>
         </div>
