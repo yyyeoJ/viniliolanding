@@ -32,7 +32,7 @@ const Statscounter = () => {
             
           }
         },
-        {threshold: 0.8})
+        {threshold: 1})
         counterObserver.observe(genresRef.current)
     },1000)
     

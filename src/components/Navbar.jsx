@@ -12,7 +12,7 @@ const Navbar = (props) => {
     <nav className={props.navbarOpen ? "bg-[#001229] z-40 w-[100vw] fixed top-0 h-[4rem] flex overlfow-x-hidden" : "bg-gradient-to-b from-[#00204a] to-[#001229] z-40 w-[100vw]  fixed top-0 h-[4rem] flex"}>
         <div className="flex items-center justify-between w-full dl:w-[80%] px-[2rem] mx-auto">
             {/*Logo */}
-            <div onClick={()=>{console.log(document.getElementById("Hero")), document.getElementById("Hero").scrollIntoView()}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
+            <div onClick={()=>{ document.getElementById("Hero").scrollIntoView()}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
                                                                                         : "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]"}>
                 
                 <TbVinyl className="w-12 h-12 ml-2 pr-2 "/>

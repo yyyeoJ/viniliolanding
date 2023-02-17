@@ -36,6 +36,8 @@ function App() {
         <Hero  buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Statscounter />
         <Features/>
+        <Statscounter />
+
 
       
 

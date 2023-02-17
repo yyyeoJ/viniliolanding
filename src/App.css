@@ -32,3 +32,10 @@ body,
     background: #203147;
   }
   
+#features{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#features::-webkit-scrollbar {
+  display: none;
+}
