@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar'
 import Features from './components/Features';
 import Sponsors from './components/Sponsors';
+import Devices from './components/Devices';
 
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
         <Statscounter />
         <Features/>
         <Sponsors />
+        <Devices />
+
 
       
 
