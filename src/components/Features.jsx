@@ -32,11 +32,11 @@ const Features = () => {
         entries=>{
           const entry = entries[0]
           if(entry.isIntersecting){
-          leftRef.current.className = "opacity-100 hidden tl:block transition-all duration-300 relative left-[-5rem]"
+          leftRef.current.className = "will-change-transform opacity-100 hidden tl:block transition-all duration-300 relative translate-x-[-5rem]"
           featureRef.current.className = "animate-appearFromDown w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
 
           }else{
-            leftRef.current.className = "opacity-100 hidden tl:block transition-all duration-300 relative left-[0rem]"
+            leftRef.current.className = "will-change-transform opacity-100 hidden tl:block transition-all duration-300 relative translatel-x-[0rem]"
 
           }
         },
@@ -47,9 +47,9 @@ const Features = () => {
           entries=>{
             const entry = entries[0]
             if(entry.isIntersecting){
-              rightRef.current.className = "hidden tl:block opacity-100 relative right-[-2rem] pl-[0.8rem] transition-all duration-300"
+              rightRef.current.className = "will-change-transform hidden tl:block opacity-100 relative translate-x-[-2rem] pl-[0.8rem] transition-all duration-300"
             }else{
-              rightRef.current.className = "hidden tl:block opacity-100 relative right-[1rem] pl-[0.8rem] transition-all duration-300"
+              rightRef.current.className = "will-change-transform hidden tl:block opacity-100 relative translate-x-[1rem] pl-[0.8rem] transition-all duration-300"
             }
           },
           {threshold: 0.69})
@@ -209,9 +209,9 @@ const Features = () => {
               {/* slider container */}
               <div className="flex items-center justify-center align-center w-[100vw] ">
               {/*left arrow */}
-              <div ref={leftRef} onClick={()=>{slideLeft(500)}} className="opacity-0 hidden tl:block transition-all duration-300"><BsChevronLeft  size={40} className="text-white z-10"/></div>
+              <div ref={leftRef} onClick={()=>{slideLeft(500)}} className=" will-change-transform opacity-0 hidden tl:block transition-all duration-300"><BsChevronLeft  size={40} className="text-white z-10"/></div>
               {/* slider  */}
-              <div id="slider" className=" snap-x snap-mandatory flex flex-row scroll-smooth items-center relative w-[95vw] ps:h-[35rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem] overflow-x-visible overflow-y-hidden">
+              <div id="slider" className=" snap-x ds:snap-none snap-mandatory flex flex-row scroll-smooth items-center relative w-[95vw] ps:h-[35rem] tp:h-[50rem] tl:h-[40rem] ds:h-[35rem] dl:h-[55rem] overflow-x-visible overflow-y-hidden">
                 {/* Cards container */}
                 <div className="flex flex-row gap-[1.2rem] absolute left-[50vw] pr-[5rem]">
 
@@ -281,7 +281,7 @@ const Features = () => {
 
                 </div>
               </div>
-              <div ref={rightRef} onClick={()=>{slideRight(500)}} className="hidden tl:block opacity-100 relative right-[1rem] pl-[0.8rem] transition-all duration-300"><BsChevronRight  size={40} className="text-white-500 z-10"/></div>
+              <div ref={rightRef} onClick={()=>{slideRight(500)}} className="will-change-transform hidden tl:block opacity-100 relative translate-x-[1rem] pl-[0.8rem] transition-all duration-300"><BsChevronRight  size={40} className="text-white-500 z-10"/></div>
               </div>
 
              {/* dots container */}
