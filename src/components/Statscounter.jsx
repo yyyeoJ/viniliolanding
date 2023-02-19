@@ -23,12 +23,24 @@ const Statscounter = () => {
           const entry = entries[0]
           if(entry.isIntersecting){
             counterRef.current.className = "opacity-100 transition-all duration-1000 flex flex-col tp:flex-row items-center gap-[1rem] dl:gap-[3rem] w-[90vw] justify-center flex-wrap text-white font-bold"
-            songsRef.current.className =   "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
-            artistsRef.current.className = "opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
-            genresRef.current.className =  "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
-            playlistRef.current.className ="opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
-            counterObserver.unobserve(genresRef.current)
-            countUp()
+            setTimeout(() => {
+              songsRef.current.className =   "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+            }, 200);
+            setTimeout(() => {
+              artistsRef.current.className = "opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              countUp()
+              
+            }, 400);
+            setTimeout(() => {
+              genresRef.current.className =  "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              
+            }, 600);
+            setTimeout(() => {
+              playlistRef.current.className ="opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              counterObserver.unobserve(genresRef.current)
+              
+            }, 800);
+            
             
           }
         },

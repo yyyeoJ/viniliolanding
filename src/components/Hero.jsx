@@ -17,7 +17,7 @@ const Hero = (props) => {
             <div className="flex flex-col items-center">
                 <div className="animate-appearFromRight font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-center text-[3rem] ps:text-[2.5rem] tp:text-[5rem] tl:text-[3rem] dl:text-[5rem]">For your ears</div>
                 <div className="animate-appearFromRight text-center tl:text-end font-semibold pb-3 w-[20rem] tp:w-[30rem] tl:w-[20rem] dl:w-[35rem] text-[1rem] ps:text-[0.8rem] tp:text-[2rem] tl:text-[1.5rem] dl:text-[3rem]">The future of listening to music & more</div>
-                <button className="animate-appearFromRight bg-gradient-to-b from-[#ffffffba] to-[#ffff] text-black rounded-xl p-3 w-[15rem] tp:w-[30rem] tl:w-[20rem] dl:w-[35rem] font-bold text-[1rem] ps:text-[0.8rem] tp:text-[2rem] tl:text-[1.5rem] dl:text-[3rem]"
+                <button className="animate-appearFromRight bg-gradient-to-b from-[#ffffffba] to-[#ffff] hover:from-gray-400 hover:to-gray-400 text-black rounded-xl p-3 w-[15rem] tp:w-[30rem] tl:w-[20rem] dl:w-[35rem] font-bold text-[1rem] ps:text-[0.8rem] tp:text-[2rem] tl:text-[1.5rem] dl:text-[3rem]"
                         onClick={()=>props.setButtonClicked(!props.buttonClicked)}>What is Vinilio?</button>
             </div>
         </div>
@@ -31,7 +31,7 @@ const Hero = (props) => {
             <div className="flex flex-col items-center">
                 <div className="animate-appearFromRight font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-center text-[3rem] ps:text-[2.5rem] tp:text-[5rem] tl:text-[3rem] dl:text-[5rem]">For your ears</div>
                 <div className="animate-appearFromRight text-center tl:text-end font-semibold pb-3 w-[20rem] tp:w-[30rem] tl:w-[20rem] dl:w-[35rem] text-[1rem] ps:text-[0.8rem] tp:text-[2rem] tl:text-[1.5rem] dl:text-[3rem]">The future of listening to music & more</div>
-                <button className="animate-appearFromRight bg-gradient-to-b from-[#ffffffba] to-[#ffff] text-black rounded-xl p-3 w-[15rem] tp:w-[30rem] tl:w-[20rem] dl:w-[35rem] font-bold text-[1rem] ps:text-[0.8rem] tp:text-[2rem] tl:text-[1.5rem] dl:text-[3rem]"
+                <button className="animate-appearFromRight bg-gradient-to-b from-[#ffffffba] to-[#ffff] hover:from-gray-400 hover:to-gray-400 text-black rounded-xl p-3 w-[15rem] tp:w-[30rem] tl:w-[20rem] dl:w-[35rem] font-bold text-[1rem] ps:text-[0.8rem] tp:text-[2rem] tl:text-[1.5rem] dl:text-[3rem]"
                         onClick={()=>props.setButtonClicked(!props.buttonClicked)}>What is Vinilio?</button>
             </div>
         </div>

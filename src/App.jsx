@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar'
 import Features from './components/Features';
 import Sponsors from './components/Sponsors';
+import Pricing from './components/Pricing';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Statscounter />
         <Features/>
         <Sponsors/>
+        <Pricing />
 
     </div>
   )
