@@ -21,8 +21,10 @@ body,
 
 /* width */
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.3rem;
   }
+
+
   
   /* Track */
   ::-webkit-scrollbar-track {
@@ -31,13 +33,14 @@ body,
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-      background: #203147;
+      background: #1d3c68;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #203147;
+    background: #254d84;
   }
+  
 
   
 #slider{

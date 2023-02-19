@@ -12,7 +12,8 @@ module.exports = {
         "tp" : {"min":"480px"},
         "tl" : {"min":"1024px"},
         "ds" : {"min":"1280px"},
-        "dl" : {"min":"1920px"}
+        "dl" : {"min":"1920px"},
+        "dxl" : {"min":"2560px"}
       },
       animation:{
         "hero2" : "hero2 0.3s linear",
