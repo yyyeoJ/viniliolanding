@@ -23,10 +23,10 @@ const Navbar = (props) => {
                 <li>
                     <div className="group h-14 relative top-[5px]">
                         <div className="animate-appearFromUp cursor-pointer group-hover:bg-[#203147] transition-all duration-300 py-2 px-3 rounded-lg text-xl font-bold tracking-wide">About</div>
-                        <div className="translate-y-[-0.5rem] group-hover:translate-y-0 absolute mt-2 opacity-0 flex pointer-events-none flex-col group-hover:pointer-events-auto group-hover:opacity-100 bg-white text-black text-xl rounded-lg p-3 transition-all duration-200 group-hover:duration-500">
+                        <div className="w-[12rem] translate-y-[-0.5rem] group-hover:translate-y-0 absolute mt-2 opacity-0 flex pointer-events-none flex-col group-hover:pointer-events-auto group-hover:opacity-100 bg-white text-black text-xl rounded-lg p-3 transition-all duration-200 group-hover:duration-500">
                         <a className="hover:underline cursor-pointer">Features</a>
+                        <a className="hover:underline cursor-pointer">Supported devices</a>
                         <a className="hover:underline cursor-pointer">Pricing</a>
-                        <a className="hover:underline cursor-pointer">Testimonials</a>
                         </div>
                     </div>
                     </li>
@@ -54,7 +54,7 @@ const Navbar = (props) => {
                                                         : "relative bottom-4 transition-all duration-500"}/>
                 </button>     
                 {/*Opened */}
-                <div className={props.navbarOpen ? "fixed overflow-y-scroll pb-[8rem] right-0 bottom-0 bg-[#000e21] z-40 top-[4rem] w-full gap-5 flex flex-col px-[5rem] ds:hidden h-full text-white pointer-events-auto opacity-100 transition-all duration-[600ms]" 
+                <div className={props.navbarOpen ? "fixed overflow-y-scroll pb-[8rem] right-0 bottom-0 bg-[#000e21] z-40 top-[4rem] w-full gap-5 flex flex-col px-[5rem] ds:hidden h-[100vh] text-white pointer-events-auto opacity-100 transition-all duration-[600ms]" 
                                                  : "fixed overflow-y-scroll right-0 bottom-0 bg-[#000e21] z-40 top-[4rem] w-full gap-5 flex flex-col px-[5rem] ds:hidden h-[0rem]  text-white pointer-events-none opacity-100   transition-all duration-[600ms]"}>
 
                         <div className={props.navbarOpen ? "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide" 

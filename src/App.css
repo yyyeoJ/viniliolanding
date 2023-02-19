@@ -13,6 +13,12 @@ body,
 }
 
 
+@media (max-width: 1279px){
+  ::-webkit-scrollbar{
+    display:none
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 1rem;
@@ -34,11 +40,11 @@ body,
   }
 
   
-#features{
+#slider{
   -ms-overflow-style: none;
   scrollbar-width: none;
   will-change: transform;
 }
-#features::-webkit-scrollbar {
+#slider::-webkit-scrollbar {
   display: none;
 }

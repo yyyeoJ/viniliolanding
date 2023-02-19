@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar'
 import Features from './components/Features';
 import Sponsors from './components/Sponsors';
-import Devices from './components/Devices';
 
 
 function App() {
@@ -29,20 +28,21 @@ function App() {
   const [navbarOpen,setNavbarOpen] = useState(false);
   const [herobuttonClicked,setHerobuttonClicked] = useState(false);
 
+// #000e21
+// #006FFF
+// #203147
+
 
 
   return (
-    <div className="app bg-[#b5bbc4] overflow-x-hidden">
+    <div className="app overflow-x-hidden">
 
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Hero  buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Statscounter />
         <Features/>
         <Sponsors />
-        <Devices />
 
-
-      
 
     </div>
   )
