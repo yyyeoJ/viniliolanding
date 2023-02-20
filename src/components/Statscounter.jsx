@@ -26,20 +26,20 @@ const Statscounter = () => {
             setTimeout(() => {
               songsRef.current.className =   "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               countUp()
-            }, 200);
+            }, 100);
             setTimeout(() => {
               artistsRef.current.className = "opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               
-            }, 400);
+            }, 300);
             setTimeout(() => {
               genresRef.current.className =  "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               
-            }, 600);
+            }, 500);
             setTimeout(() => {
               playlistRef.current.className ="opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               counterObserver.unobserve(genresRef.current)
               
-            }, 800);
+            }, 700);
             
             
           }
