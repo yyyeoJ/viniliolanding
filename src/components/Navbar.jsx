@@ -9,14 +9,15 @@ const Navbar = (props) => {
 
     return (
 
-    <nav className={props.navbarOpen ? " will-change-transform bg-[#001229] z-40 w-[100vw] fixed top-0 h-[4rem] flex overlfow-x-hidden" : " will-change-transform bg-gradient-to-b from-[#00204a] to-[#001229] z-40 w-[100vw]  fixed top-0 h-[4rem] flex"}>
+    <nav className={props.navbarOpen ? " will-change-transform bg-[#001229] z-40 w-[100vw] fixed top-0 h-[4rem] flex overlfow-x-hidden" 
+                                     : " will-change-transform bg-gradient-to-b from-[#00204a] to-[#001229] z-40 w-[100vw]  fixed top-0 h-[4rem] flex"}>
         <div className="flex items-center justify-between w-full dl:w-[80%] px-[2rem] mx-auto">
             {/*Logo */}
             <div onClick={()=>{ document.getElementById("Hero").scrollIntoView()}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
-                                                                                        : "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]"}>
+                                                                                                               : "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]"}>
                 
                 <TbVinyl className="w-12 h-12 ml-2 pr-2 "/>
-                <h1 className="font-extrabold text-2xl tracking-widest bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text">Vinilio</h1>
+                <h1 className="font-bold text-2xl tracking-widest bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text">Vinilio</h1>
             </div>
             {/*Desktop Nav */}
             <ul className="text-white hidden ds:flex flex-row gap-5 items-center ">
@@ -46,34 +47,34 @@ const Navbar = (props) => {
                 {/*Button */}
                 <button className="flex ds:hidden z-30 animate-appearFromUp cursor-pointer flex-col text-2xl text-white"
                     onClick={()=>{props.setNavbarOpen(!props.navbarOpen)}}>
-                    <BsDashLg  className={props.navbarOpen ? "relative top-6 transition-all duration-500 rotate-45" 
-                                                        : "relative top-4 transition-all duration-500"}/>
-                    <BsDashLg className={props.navbarOpen ? "transition-all duration-500 opacity-0 translate-x-[-1rem]" 
-                                                        : "transition-all duration-500"}/>
-                    <BsDashLg className={props.navbarOpen ? "relative bottom-6 transition-all duration-500 rotate-[-45deg]" 
-                                                        : "relative bottom-4 transition-all duration-500"}/>
+                    <BsDashLg  className={props.navbarOpen  ? "relative top-6 transition-all duration-500 rotate-45" 
+                                                            : "relative top-4 transition-all duration-500"}/>
+                    <BsDashLg className={props.navbarOpen   ? "transition-all duration-500 opacity-0 translate-x-[-1rem]" 
+                                                            : "transition-all duration-500"}/>
+                    <BsDashLg className={props.navbarOpen   ? "relative bottom-6 transition-all duration-500 rotate-[-45deg]" 
+                                                            : "relative bottom-4 transition-all duration-500"}/>
                 </button>     
                 {/*Opened */}
                 <div className={props.navbarOpen ? "fixed overflow-y-scroll pb-[8rem] right-0 bottom-0 bg-[#000e21] z-40 top-[4rem] w-full gap-5 flex flex-col px-[5rem] ds:hidden h-[100vh] text-white pointer-events-auto opacity-100 transition-all duration-[600ms]" 
                                                  : "fixed overflow-y-scroll right-0 bottom-0 bg-[#000e21] z-40 top-[4rem] w-full gap-5 flex flex-col px-[5rem] ds:hidden h-[0rem]  text-white pointer-events-none opacity-100   transition-all duration-[600ms]"}>
 
                         <div className={props.navbarOpen ? "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide" 
-                                                        : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-32rem]"}>About</div>
+                                                         : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-32rem]"}>About</div>
                         <div className={props.navbarOpen ? "transition-all duration-[400ms] ml-2 translate-y-0" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Features</div>
+                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Features</div>
                         <div className={props.navbarOpen ? "transition-all duration-[400ms] ml-2" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Pricing</div>
+                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Pricing</div>
                         <div className={props.navbarOpen ? "transition-all duration-[500ms] ml-2" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Testimonials</div>
+                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Testimonials</div>
 
                         <div className={props.navbarOpen ? "pt-2  transition-all duration-[600ms] text-2xl font-bold tracking-wide" 
-                                                        : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-20rem]"}>Support</div>
+                                                         : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-20rem]"}>Support</div>
                         <div className={props.navbarOpen ? "transition-all duration-[700ms] ml-2 translate-y-0" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>FAQ</div>
+                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>FAQ</div>
                         <div className={props.navbarOpen ? "transition-all duration-[800ms]      translate-y-0 ml-2" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Supported devices</div>
+                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Supported devices</div>
                         <div className={props.navbarOpen ? "transition-all duration-[900ms]      translate-y-0 ml-2" 
-                                                        : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Contact us</div>
+                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Contact us</div>
 
 
                         <div className={props.navbarOpen ? "transition-all duration-[1000ms] bg-white flex justify-center items-center h-14 text-black rounded-lg text-xl font-bold tracking-wide" 

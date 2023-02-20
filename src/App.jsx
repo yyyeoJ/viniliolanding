@@ -36,7 +36,7 @@ function App() {
 
 
   return (
-    <div className="app overflow-x-hidden">
+    <div className="app overflow-x-hidden font-[Montserrat]">
 
         <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Hero  buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
@@ -44,6 +44,8 @@ function App() {
         <Features/>
         <Sponsors/>
         <Pricing />
+        <Sponsors/>
+
 
     </div>
   )

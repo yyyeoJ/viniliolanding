@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import {BsChevronLeft , BsChevronRight, BsCircle , BsCircleFill} from "react-icons/bs"
+import Card from './Card'
 
 
 const Features = () => {
@@ -28,12 +29,22 @@ const Features = () => {
  
   useEffect(()=>{
     setTimeout(()=>{
+      const featureObserver = new IntersectionObserver(
+        entries=>{
+          const entry = entries[0]
+          if(entry.isIntersecting){
+          featureRef.current.className = "animate-appearFromDown w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
+          }
+        },
+        {threshold: 0.5})
+        featureObserver.observe(featureRef.current)
+
+
       const leftObserver = new IntersectionObserver(
         entries=>{
           const entry = entries[0]
           if(entry.isIntersecting){
           leftRef.current.className = "hover:scale-[130%] will-change-transform opacity-100 hidden tl:block transition-all duration-300 relative translate-x-[-5rem] z-10"
-          featureRef.current.className = "animate-appearFromDown w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
 
           }else{
             leftRef.current.className = "hover:scale-[130%] will-change-transform opacity-100 hidden tl:block transition-all duration-300 relative z-10"
@@ -211,76 +222,21 @@ const Features = () => {
               {/*left arrow */}
               <div ref={leftRef} onClick={()=>{slideLeft(500)}} className="hover:scale-[130%] will-change-transform opacity-0 translate-x-[-5rem] hidden tl:block transition-all duration-300"><BsChevronLeft  size={40} className="text-white z-10"/></div>
               {/* slider  */}
-              <div id="slider" className=" snap-x snap-mandatory flex flex-row scroll-smooth items-center relative w-[100vw] ps:h-[35rem] tp:h-[50rem] tl:h-[40rem] ds:h-[36rem] dl:h-[55rem] overflow-x-visible overflow-y-hidden">
+              <div id="slider" className=" snap-x snap-mandatory flex flex-row scroll-smooth items-center relative w-[100vw] ps:h-[35rem] tp:h-[50rem] tl:h-[43rem] ds:h-[38rem] dl:h-[55rem] overflow-x-visible overflow-y-hidden">
                 {/* Cards container */}
                 <div className="flex flex-row gap-[1.2rem] absolute left-[40vw] pr-[8rem]">
 
-                  {/* Feature Card */}
-                  <div ref={card1} className="snap-center ps:h-[33rem] ps:w-[15rem] p:w-[19rem] p:h-[34rem] tp:w-[27rem] tp:h-[50rem] tl:h-[40rem]  ds:h-[36rem] ds:w-[24rem] dl:h-[55rem] dl:w-[37rem] dxl:w-[30rem] will-change-transform  flex flex-col items-center  bg-gradient-to-b from-[#1d3c68] to-[#102139]   rounded-[1.5rem]">
-                      <div className="w-[12rem] h-[12rem] tp:w-[19rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
-                        <img className=" rounded-[100%]  bg-[white]" src="./src/assets/online-world-animate.svg"/>
-                      </div>
-                      <div className='ps:text-3xl p:text-3xl tp:text-[3rem] tl:text-[2.5rem] ds:text-[2rem] dl:text-[3rem] pt-[1rem] font-bold text-center bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Title</div>
-                      <div className="text-white px-[2rem] pt-[2rem] ps:text-[1.1rem] p:text-[1.3rem] tp:text-[1.95rem] tl:text-[1.8rem] ds:text-[1.5rem] dl:text-[1.8rem] font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quas sed rerum molestias sit tempora ea, necessitatibus debitis maiores delectus?</div>
-                  </div>
-
-                  {/* Feature Card */}
-                  <div ref={card2} className="snap-center ps:h-[33rem] ps:w-[15rem] p:w-[19rem] p:h-[34rem] tp:w-[27rem] tp:h-[50rem] tl:h-[40rem]  ds:h-[36rem] ds:w-[24rem] dl:h-[55rem] dl:w-[37rem] dxl:w-[30rem] will-change-transform  flex flex-col items-center  bg-gradient-to-b from-[#1d3c68] to-[#102139]  rounded-[1.5rem]">
-                      <div className="w-[12rem] h-[12rem] tp:w-[19rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
-                        <img className=" rounded-[100%]  bg-[white]" src="./src/assets/composer-music-animate.svg"/>
-                      </div>
-                      <div className='ps:text-3xl p:text-3xl tp:text-[3rem] tl:text-[2.5rem] ds:text-[2rem] dl:text-[3rem] pt-[1rem] font-bold text-center bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Title</div>
-                      <div className="text-white px-[2rem] pt-[2rem] ps:text-[1.1rem] p:text-[1.3rem] tp:text-[1.95rem] tl:text-[1.8rem] ds:text-[1.5rem] dl:text-[1.8rem] font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quas sed rerum molestias sit tempora ea, necessitatibus debitis maiores delectus?</div>
-                  </div>
-
-                  {/* Feature Card */}
-                  <div ref={card3} className="snap-center ps:h-[33rem] ps:w-[15rem] p:w-[19rem] p:h-[34rem] tp:w-[27rem] tp:h-[50rem] tl:h-[40rem]  ds:h-[36rem] ds:w-[24rem] dl:h-[55rem] dl:w-[37rem] dxl:w-[30rem] will-change-transform  flex flex-col items-center  bg-gradient-to-b from-[#1d3c68] to-[#102139]  rounded-[1.5rem]">
-                      <div className="w-[12rem] h-[12rem] tp:w-[19rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
-                        <img className=" rounded-[100%]  bg-[white]" src="./src/assets/user-flow-animate.svg"/>
-                      </div>
-                      <div className='ps:text-3xl p:text-3xl tp:text-[3rem] tl:text-[2.5rem] ds:text-[2rem] dl:text-[3rem] pt-[1rem] font-bold text-center bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Title</div>
-                      <div className="text-white px-[2rem] pt-[2rem] ps:text-[1.1rem] p:text-[1.3rem] tp:text-[1.95rem] tl:text-[1.8rem] ds:text-[1.5rem] dl:text-[1.8rem] font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quas sed rerum molestias sit tempora ea, necessitatibus debitis maiores delectus?</div>
-                  </div>
-
-                  {/* Feature Card */}
-                  <div ref={card4} className="snap-center ps:h-[33rem] ps:w-[15rem] p:w-[19rem] p:h-[34rem] tp:w-[27rem] tp:h-[50rem] tl:h-[40rem]  ds:h-[36rem] ds:w-[24rem] dl:h-[55rem] dl:w-[37rem] dxl:w-[30rem] will-change-transform  flex flex-col items-center  bg-gradient-to-b from-[#1d3c68] to-[#102139]  rounded-[1.5rem]">
-                      <div className="w-[12rem] h-[12rem] tp:w-[19rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
-                        <img className=" rounded-[100%]  bg-[white]" src="./src/assets/analyze-animate.svg"/>
-                      </div>
-                      <div className='ps:text-3xl p:text-3xl tp:text-[3rem] tl:text-[2.5rem] ds:text-[2rem] dl:text-[3rem] pt-[1rem] font-bold text-center bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Title</div>
-                      <div className="text-white px-[2rem] pt-[2rem] ps:text-[1.1rem] p:text-[1.3rem] tp:text-[1.95rem] tl:text-[1.8rem] ds:text-[1.5rem] dl:text-[1.8rem] font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quas sed rerum molestias sit tempora ea, necessitatibus debitis maiores delectus?</div>
-                  </div>
-
-                  {/* Feature Card */}
-                  <div ref={card5} className="snap-center ps:h-[33rem] ps:w-[15rem] p:w-[19rem] p:h-[34rem] tp:w-[27rem] tp:h-[50rem] tl:h-[40rem]  ds:h-[36rem] ds:w-[24rem] dl:h-[55rem] dl:w-[37rem] dxl:w-[30rem] will-change-transform  flex flex-col items-center  bg-gradient-to-b from-[#1d3c68] to-[#102139]  rounded-[1.5rem]">
-                      <div className="w-[12rem] h-[12rem] tp:w-[19rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
-                        <img className=" rounded-[100%]  bg-[white]" src="./src/assets/rock-band-animate.svg"/>
-                      </div>
-                      <div className='ps:text-3xl p:text-3xl tp:text-[3rem] tl:text-[2.5rem] ds:text-[2rem] dl:text-[3rem] pt-[1rem] font-bold text-center bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Title</div>
-                      <div className="text-white px-[2rem] pt-[2rem] ps:text-[1.1rem] p:text-[1.3rem] tp:text-[1.95rem] tl:text-[1.8rem] ds:text-[1.5rem] dl:text-[1.8rem] font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quas sed rerum molestias sit tempora ea, necessitatibus debitis maiores delectus?</div>
-                  </div>
-                  
-                  {/* Feature Card */}
-                  <div ref={card6} className="snap-center ps:h-[33rem] ps:w-[15rem] p:w-[19rem] p:h-[34rem] tp:w-[27rem] tp:h-[50rem] tl:h-[40rem]  ds:h-[36rem] ds:w-[24rem] dl:h-[55rem] dl:w-[37rem] dxl:w-[30rem] will-change-transform  flex flex-col items-center  bg-gradient-to-b from-[#1d3c68] to-[#102139]  rounded-[1.5rem]">
-                      <div className="w-[12rem] h-[12rem] tp:w-[19rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
-                        <img className="w-[12rem] h-[12rem] tp:w-[19rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] rounded-[100%]  bg-[white]" src="./src/assets/karaoke-animate.svg"/>
-                      </div>
-                      <div className='ps:text-3xl p:text-3xl tp:text-[3rem] tl:text-[2.5rem] ds:text-[2rem] dl:text-[3rem] pt-[1rem] font-bold text-center bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Title</div>
-                      <div className="text-white px-[2rem] pt-[2rem] ps:text-[1.1rem] p:text-[1.3rem] tp:text-[1.95rem] tl:text-[1.8rem] ds:text-[1.5rem] dl:text-[1.8rem] font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quas sed rerum molestias sit tempora ea, necessitatibus debitis maiores delectus?</div>
-                  </div>
-
-                  {/* Feature Card */}
-                  <div ref={card7} className="snap-center ps:h-[33rem] ps:w-[15rem] p:w-[19rem] p:h-[34rem] tp:w-[27rem] tp:h-[50rem] tl:h-[40rem]  ds:h-[36rem] ds:w-[24rem] dl:h-[55rem] dl:w-[37rem] dxl:w-[30rem] will-change-transform  flex flex-col items-center  bg-gradient-to-b from-[#1d3c68] to-[#102139]  rounded-[1.5rem]">
-                      <div className="w-[12rem] h-[12rem] tp:w-[19rem] tp:h-[20rem] tl:h-[15rem] tl:w-[15rem] ds:w-[14rem] ds:h-[14rem] dl:w-[25rem] dl:h-[25rem] mt-[2rem] rounded-full bg-[white] overflow-visible">
-                        <img className=" rounded-[100%]  bg-[white]" src="./src/assets/podcast-audience-animate.svg"/>
-                      </div>
-                      <div className='ps:text-3xl p:text-3xl tp:text-[3rem] tl:text-[2.5rem] ds:text-[2rem] dl:text-[3rem] pt-[1rem] font-bold text-center bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Title</div>
-                      <div className="text-white px-[2rem] pt-[2rem] ps:text-[1.1rem] p:text-[1.3rem] tp:text-[1.95rem] tl:text-[1.8rem] ds:text-[1.5rem] dl:text-[1.8rem] font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quas sed rerum molestias sit tempora ea, necessitatibus debitis maiores delectus?</div>
-                  </div>
-
+                  <Card refprop={card1} image="./src/assets/online-world-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card2} image="./src/assets/composer-music-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card3} image="./src/assets/user-flow-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card4} image="./src/assets/analyze-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card5} image="./src/assets/rock-band-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card6} image="./src/assets/karaoke-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card7} image="./src/assets/podcast-audience-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
 
                 </div>
               </div>
+              {/* Right arrow */}
               <div ref={rightRef} onClick={()=>{slideRight(500)}} className="hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative translate-x-[-1rem] pl-[0.8rem] transition-all duration-300"><BsChevronRight  size={40} className="text-white-500 z-10"/></div>
               </div>
 

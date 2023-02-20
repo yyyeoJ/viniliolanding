@@ -24,19 +24,19 @@ const Statscounter = () => {
           if(entry.isIntersecting){
             counterRef.current.className = "opacity-100 transition-all duration-1000 flex flex-col tp:flex-row items-center gap-[1rem] dl:gap-[3rem] w-[90vw] justify-center flex-wrap text-white font-bold"
             setTimeout(() => {
-              songsRef.current.className =   "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              songsRef.current.className =   "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              countUp()
             }, 200);
             setTimeout(() => {
-              artistsRef.current.className = "opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
-              countUp()
+              artistsRef.current.className = "opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               
             }, 400);
             setTimeout(() => {
-              genresRef.current.className =  "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              genresRef.current.className =  "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               
             }, 600);
             setTimeout(() => {
-              playlistRef.current.className ="opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              playlistRef.current.className ="opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               counterObserver.unobserve(genresRef.current)
               
             }, 800);
@@ -56,7 +56,7 @@ const Statscounter = () => {
     let songs = 50
     let artists = 3
     let genres = 0
-    let playlists = 800
+    let playlists = 600
     let interval = setInterval(() => {
       if(songs<80){
         songs++
@@ -85,10 +85,10 @@ const Statscounter = () => {
     <div className="w-[99vw] pb-[20vh] pt-[31.5vh] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
 
       <div    ref={counterRef} className="opacity-0 transition-all flex flex-col tp:flex-row gap-[1rem] dl:gap-[3rem] w-[90vw] justify-center items-center flex-wrap text-white font-bold">
-        <div    ref={songsRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{songs}M+</div><div className="   text-3xl dl:text-4xl">Songs</div></div>
-        <div  ref={artistsRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-gradient-to-b from-[#203147] to-[#203147] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{artists}M+</div><div className=" text-3xl dl:text-4xl">Artists</div></div>
-        <div   ref={genresRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-gradient-to-b from-[#203147] to-[#203147] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{genres}+</div><div className="   text-3xl dl:text-4xl">Genres</div></div>
-        <div ref={playlistRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-gradient-to-b from-[#203147] to-[#203147] w-[15rem] tl:w-[11rem] dl:w-[15rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{playlists}+</div><div className="text-3xl dl:text-4xl">Playlists</div></div>
+        <div    ref={songsRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{songs}M+</div><div className="   text-3xl dl:text-4xl">Songs</div></div>
+        <div  ref={artistsRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-gradient-to-b from-[#203147] to-[#203147] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{artists}M+</div><div className=" text-3xl dl:text-4xl">Artists</div></div>
+        <div   ref={genresRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-gradient-to-b from-[#203147] to-[#203147] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{genres}+</div><div className="   text-3xl dl:text-4xl">Genres</div></div>
+        <div ref={playlistRef} className="opacity-0 transition-all duration-100 flex flex-row tp:flex-col justify-center items-center bg-gradient-to-b from-[#203147] to-[#203147] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"><div className="text-4xl dl:text-6xl">{playlists}+</div><div className="text-3xl dl:text-4xl">Playlists</div></div>
         
       </div>
     </div>
