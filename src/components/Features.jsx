@@ -36,7 +36,7 @@ const Features = () => {
           featureRef.current.className = "animate-appearFromDown w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
           }
         },
-        {threshold: 0.5})
+        {threshold: 0.6})
         featureObserver.observe(featureRef.current)
 
 
