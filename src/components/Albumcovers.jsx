@@ -5,8 +5,67 @@ const Albumcovers = (props) => {
 
  const albumref = useRef()
 
+let images = [
+    "./src/assets/thewall.jpg",
+    "./src/assets/fotofobia.jpg",
+    "./src/assets/abbeyroad.jpg",
+    "./src/assets/darkside.jpg",
+    "./src/assets/nirvana.jpg",
+    "./src/assets/cali.jpg",
+    "./src/assets/fourmoods.jpg",
+    "./src/assets/stadium.jpg",
+    "./src/assets/am.jpg",
+    "./src/assets/americanbeauty.jpg",
+    "./src/assets/bytheway.jpg",
+    "./src/assets/stoney.jpg",
+    "./src/assets/getaway.jpg",
+    "./src/assets/divide.jpg",
+    "./src/assets/wishyouwerehere.jpg",
+    "./src/assets/thatsthespirit.jpg",
+    "./src/assets/apetite.jpg",
+    "./src/assets/animals.jpg",
+    "./src/assets/equals.jpg",
+    "./src/assets/rumours.jpg",
+    "./src/assets/metallica.jpg",
+    "./src/assets/eminem.jpg",
+    "./src/assets/poliphia.jpg",
+    "./src/assets/joji.jpg",
+    "./src/assets/mayer.jpg",
+    "./src/assets/peep.jpg",
+    "./src/assets/greenday.jpg",
+    "./src/assets/hofi.jpg",
+    "./src/assets/weeknd.jpg",
+    "./src/assets/krubi.jpg",
+    "./src/assets/pilots.jpg",
+    "./src/assets/eilish.jpg",
+    "./src/assets/dragons.jpg",
+    "./src/assets/lofi1.jpg",
+    "./src/assets/lofi2.jpg",
+    "./src/assets/bells.jpg",
+    "./src/assets/josha.jpg",
+    "./src/assets/autumngloom.jpg",
+    "./src/assets/miafa.jpg",
+    "./src/assets/szornyeteg.jpg",
+]
 
+
+//fisher-yates shuffle
+function shuffle(array) {
+    let currentIndex = array.length
+    let randomIndex
+
+    while (currentIndex != 0) {
+  
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      [array[currentIndex], array[randomIndex]] = [ array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
  
+images = shuffle(images)
 
 
  useEffect(()=>{
@@ -20,7 +79,7 @@ const Albumcovers = (props) => {
 
     const handleScroll = ()=>{
         scrollvalue = (app.scrollTop-temp)
-        albumref.current.scrollLeft += scrollvalue*0.8
+        albumref.current.scrollLeft += scrollvalue*0.9
         if(albumref.current.scrollLeft > 0){
         }
         temp = app.scrollTop
@@ -44,7 +103,7 @@ const Albumcovers = (props) => {
             }, 50);
         }
         else{app.removeEventListener("scroll",handleScroll)}
-    },{threshold:0.2})
+    },{threshold:0.1})
     albumObserver.observe(albumref.current)
 
     const coverObserver = new IntersectionObserver(entries=>{
@@ -55,7 +114,7 @@ const Albumcovers = (props) => {
                 entry.target.className = "opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]"
             }
         })
-    },{threshold:0.3})
+    },{threshold:0.1})
 
     
 
@@ -65,30 +124,11 @@ const Albumcovers = (props) => {
 
 
   return (
-        <div ref={albumref} id="albumcovers" className="h-[20rem] mt-[5rem] relative flex items-center overflow-x-scroll pointer-events-none">
+        <div ref={albumref} id="albumcovers" className="h-[50rem] mt-[10rem] relative flex items-center overflow-x-scroll pointer-events-none">
             <div className="absolute flex items-center gap-[1rem]">
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/thewall.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/fotofobia.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/abbeyroad.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/darkside.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/nirvana.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/cali.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/fourmoods.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/stadium.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/am.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/americanbeauty.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/bytheway.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/stoney.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/getaway.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/divide.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/wishyouwerehere.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/thatsthespirit.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/apetite.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/animals.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/equals.jpg'></img>
-                <img id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src='./src/assets/rumours.jpg'></img>
-    
+             {images.map((image)=>{return <img key={image} id="cover" className="opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src={image}></img>})}    
             </div>
+                
         </div>
   )
 }

@@ -42,7 +42,7 @@ module.exports = {
           "100%":{"transform" : "translatey(0rem)", "opacity" : "100%"}
         },
         appearFromDown: {
-          "0%":{"transform" : "translatey(2rem)","opacity" : "0%"},
+          "0%":{"transform" : "translatey(4rem)","opacity" : "0%"},
           "100%":{"transform" : "translatey(0rem)", "opacity" : "100%"}
         },
         appearFromLeft : {

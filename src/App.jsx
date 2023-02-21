@@ -33,10 +33,6 @@ function App() {
         <Pricing />
         <Albumcovers/>
         <Sponsors/>
-        <Sponsors/>
-        <Sponsors/>
-        <Sponsors/>
-
 
 
     </div>
