@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {BsCheck} from "react-icons/bs"
 
 
@@ -15,9 +15,11 @@ const Pricing = () => {
   const price3mobile = useRef()
 
 
-  const container = useRef()
+const container = useRef()
+
 
   useEffect(()=>{
+
     setTimeout(()=>{
       const titleObserver = new IntersectionObserver(
         entries=>{
@@ -44,7 +46,7 @@ const Pricing = () => {
               container.current.className = "transition-all duration-[700ms] tl:animate-appearFromDown w-[100vw] tp:h-full tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] pb-[0rem] flex flex-col tl:flex-row justify-center items-center tp:gap-[1rem] tl:gap-0 ds:gap-[1rem] relative"
             }
           },
-          {threshold: 0.8})
+          {threshold: 0.9})
           priceObserver.observe(container.current)
 
           const price1Observer = new IntersectionObserver(

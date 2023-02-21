@@ -48,6 +48,6 @@ body,
   scrollbar-width: none;
   will-change: transform;
 }
-#slider::-webkit-scrollbar {
+#slider::-webkit-scrollbar,#albumcovers::-webkit-scrollbar {
   display: none;
 }
