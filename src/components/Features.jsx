@@ -33,6 +33,7 @@ const Features = () => {
         entries=>{
           const entry = entries[0]
           if(entry.isIntersecting){
+            
           featureRef.current.className = "animate-appearFromDown w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
           }
         },
@@ -51,7 +52,7 @@ const Features = () => {
 
           }
         },
-        {threshold: 0.2})
+        {threshold: 0.000000005})
         leftObserver.observe(card1.current)
 
         const rightObserver = new IntersectionObserver(
@@ -63,13 +64,14 @@ const Features = () => {
               rightRef.current.className = "hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative  pl-[0.8rem] transition-all duration-300 z-10 absolute"
             }
           },
-          {threshold: 0.2})
+          {threshold: 0.000000005})
           rightObserver.observe(card7.current)
 
           const observer1 = new IntersectionObserver(
             entries=>{
               const entry = entries[0]
               if(entry.isIntersecting){
+              card1.current.children[0].src="./src/assets/illustrations/online-world-animate.svg"
               dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
               dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
               dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -77,17 +79,18 @@ const Features = () => {
               dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
               dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
               dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-
-
+              }else{
+                card1.current.children[0].src=""
               }
             },
-            {threshold: 0.1})
+            {threshold: 0.000000005})
             observer1.observe(card1.current)
 
             const observer2 = new IntersectionObserver(
               entries=>{
                 const entry = entries[0]
                 if(entry.isIntersecting){
+                card2.current.children[0].src="./src/assets/illustrations/composer-music-animate.svg"
                 dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                 dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
                 dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -96,15 +99,19 @@ const Features = () => {
                 dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                 dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
 
+                }else{
+                card2.current.children[0].src=""
                 }
               },
-              {threshold: 0.1})
+              {threshold: 0.000000005})
               observer2.observe(card2.current)
 
               const observer3 = new IntersectionObserver(
+                
                 entries=>{
                   const entry = entries[0]
                   if(entry.isIntersecting){
+                  card3.current.children[0].src="./src/assets/illustrations/user-flow-animate.svg"
                   dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                   dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                   dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
@@ -113,15 +120,19 @@ const Features = () => {
                   dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                   dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
     
+                  }else{
+                    card3.current.children[0].src=""
                   }
                 },
-                {threshold: 0.1})
+                {threshold: 0.000000005})
                 observer3.observe(card3.current)
 
                 const observer4 = new IntersectionObserver(
+                  
                   entries=>{
                     const entry = entries[0]
                     if(entry.isIntersecting){
+                    card4.current.children[0].src="./src/assets/illustrations/analyze-animate.svg"
                     dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                     dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                     dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -130,15 +141,19 @@ const Features = () => {
                     dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                     dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
       
+                    }else{
+                      card4.current.children[0].src=""
                     }
                   },
-                  {threshold: 0.1})
+                  {threshold: 0.000000005})
                   observer4.observe(card4.current)
 
                   const observer5 = new IntersectionObserver(
+                    
                     entries=>{
                       const entry = entries[0]
                       if(entry.isIntersecting){
+                      card5.current.children[0].src="./src/assets/illustrations/rock-band-animate.svg"
                       dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                       dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                       dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -147,15 +162,19 @@ const Features = () => {
                       dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                       dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
         
+                      }else{
+                        card5.current.children[0].src=""
                       }
                     },
-                    {threshold: 0.1})
+                    {threshold: 0.000000005})
                     observer5.observe(card5.current)
 
                     const observer6 = new IntersectionObserver(
+                      
                       entries=>{
                         const entry = entries[0]
                         if(entry.isIntersecting){
+                        card6.current.children[0].src="./src/assets/illustrations/karaoke-animate.svg"
                         dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                         dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                         dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -164,15 +183,19 @@ const Features = () => {
                         dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
                         dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
           
+                        }else{
+                            card6.current.children[0].src=""
                         }
                       },
-                      {threshold: 0.1})
+                      {threshold: 0.000000005})
                       observer6.observe(card6.current)
 
                       const observer7 = new IntersectionObserver(
+                        
                         entries=>{
                           const entry = entries[0]
                           if(entry.isIntersecting){
+                          card7.current.children[0].src="./src/assets/illustrations/podcast-audience-animate.svg"
                           dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                           dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                           dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -181,9 +204,11 @@ const Features = () => {
                           dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                           dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
             
+                          }else{
+                            card7.current.children[0].src=""
                           }
                         },
-                        {threshold: 0.1})
+                        {threshold: 0.000000005})
                         observer7.observe(card7.current)
 
 
@@ -226,13 +251,13 @@ const Features = () => {
                 {/* Cards container */}
                 <div className="flex flex-row gap-[1.2rem] absolute left-[40vw] pr-[8rem]">
 
-                  <Card refprop={card1} image="./src/assets/online-world-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
-                  <Card refprop={card2} image="./src/assets/composer-music-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
-                  <Card refprop={card3} image="./src/assets/user-flow-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
-                  <Card refprop={card4} image="./src/assets/analyze-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
-                  <Card refprop={card5} image="./src/assets/rock-band-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
-                  <Card refprop={card6} image="./src/assets/karaoke-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
-                  <Card refprop={card7} image="./src/assets/podcast-audience-animate.svg" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card1} image="" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card2} image="" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card3} image="" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card4} image="" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card5} image="" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card6} image="" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
+                  <Card refprop={card7} image="" title="Title" text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis laboriosam et eos rem quis amet esse consequuntur. Eius, assumenda amet!"/>
 
                 </div>
               </div>

@@ -7,13 +7,14 @@ import { BsDashLg } from 'react-icons/bs'
 const Navbar = (props) => {
 
 
+
     return (
 
     <nav className={props.navbarOpen ? " will-change-transform bg-[#001229] z-40 w-[100vw] fixed top-0 h-[4rem] flex overlfow-x-hidden" 
                                      : " will-change-transform bg-gradient-to-b from-[#00204a] to-[#001229] z-40 w-[100vw]  fixed top-0 h-[4rem] flex"}>
         <div className="flex items-center justify-between w-full dl:w-[80%] px-[2rem] mx-auto">
             {/*Logo */}
-            <div onClick={()=>{ document.getElementById("Hero").scrollIntoView()}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
+            <div onClick={()=>{props.heroRef.current.scrollIntoView()}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
                                                                                                                : "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]"}>
                 
                 <TbVinyl className="w-12 h-12 ml-2 pr-2 "/>
@@ -41,7 +42,7 @@ const Navbar = (props) => {
                         </div>
                         </div>
                     </li>           
-                    <li className="animate-appearFromUp cursor-pointer bg-gradient-to-b from-[#ffffffba] to-[#ffff] hover:from-gray-400 hover:to-gray-400 transition-all duration-300 p-2 text-black rounded-lg px-5 text-xl font-bold tracking-wide">Start listening</li>
+                    <li className="animate-appearFromUp cursor-pointer bg-white hover:bg-gray-400 transition-all duration-300 p-2 text-black rounded-lg px-5 text-xl font-bold tracking-wide">Start listening</li>
             </ul>
             {/*Mobile nav */}
                 {/*Button */}

@@ -7,6 +7,7 @@ import Features from './components/Features';
 import Sponsors from './components/Sponsors';
 import Pricing from './components/Pricing';
 import Albumcovers from './components/Albumcovers';
+import Devices from './components/Devices';
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
 
   const [navbarOpen,setNavbarOpen] = useState(false);
   const [herobuttonClicked,setHerobuttonClicked] = useState(false);
-
+  const appRef = useRef()
+  const heroRef = useRef()
 
   
 
@@ -22,18 +24,19 @@ function App() {
 // #006FFF
 // #203147
 
-  return (
-    <div id="app" className="app overflow-x-hidden font-[Montserrat]">
 
-        <Navbar navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
-        <Hero  buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
-        <Statscounter />
+  return (
+    <div id="app" ref={appRef} className="app overflow-x-hidden font-[Montserrat]">
+
+        <Navbar heroRef={heroRef} navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
+        <Hero heroRef={heroRef} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
+        <Statscounter/>
         <Features/>
         <Sponsors/>
         <Pricing />
-        <Albumcovers/>
-        <Sponsors/>
-
+        <Albumcovers appRef={appRef}/>
+        <Devices />
+        
 
     </div>
   )
