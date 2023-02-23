@@ -9,6 +9,7 @@ const Albumcovers = React.memo((props) => {
     const [images,setImages] = useState(
     [
         "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/aa/88/2c/aa882ccd-d153-9901-8ee1-c246e5b704b3/dj.esjczuop.jpg/400x400cc.jpg",
+        "https://is2-ssl.mzstatic.com/image/thumb/Music125/v4/6f/bc/e6/6fbce6c4-c38c-72d8-4fd0-66cfff32f679/20UMGIM12176.rgb.jpg/400x400cc.jpg",
         "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/83/55/53/83555381-1679-1525-0bd0-da2c3227a467/cover.jpg/400x400cc.jpg",
         "https://is5-ssl.mzstatic.com/image/thumb/Music112/v4/df/db/61/dfdb615d-47f8-06e9-9533-b96daccc029f/18UMGIM31076.rgb.jpg/400x400cc.jpg",
         "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/ba/87/dd/ba87ddde-41b8-cb44-3675-61a2ba920e36/dj.nobsviqs.jpg/400x400cc.jpg",
@@ -116,9 +117,9 @@ function shuffle(array) {
     const coverObserver = new IntersectionObserver(entries=>{
         entries.forEach(entry=>{
             if(entry.isIntersecting){
-                entry.target.className = " opacity-100 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]"
+                entry.target.className = " opacity-100 z-10 hover:scale-[105%] pointer-events-auto transition-all duration-300 ps:h-[8rem] tp:h-[15rem] shadow-lg rounded-[0.5rem]"
             }else{
-                entry.target.className = " opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]"
+                entry.target.className = " opacity-0 transition-all duration-300 ps:h-[8rem] tp:h-[15rem] shadow-lg rounded-[0.5rem]"
             }
         })
     },{threshold:0.1})
@@ -131,9 +132,9 @@ function shuffle(array) {
 
 
   return (
-        <div ref={albumref} id="albumcovers" className=" h-[50rem] mt-[10rem] relative flex items-center overflow-x-scroll will-change-transform pointer-events-none">
+        <div ref={albumref} id="albumcovers" className="ps:h-[20rem] tp:h-[40rem] dl:h-[60rem] relative flex items-center overflow-x-scroll will-change-transform pointer-events-none">
             <div className="absolute flex items-center gap-[1rem] ">
-             {images.map((image)=>{return <img key={image} id="cover" className=" opacity-0 transition-all duration-300 w-[15rem] h-[15rem] shadow-lg rounded-[0.5rem]" src={image}></img>})}    
+             {images.map((image)=>{return <img key={image} id="cover" className="opacity-0 transition-all duration-300  ps:h-[8rem] tp:h-[15rem] shadow-lg rounded-[0.5rem]" src={image}></img>})}    
             </div>
                 
         </div>

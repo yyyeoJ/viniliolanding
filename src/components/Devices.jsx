@@ -26,31 +26,40 @@ const Devices = () => {
     const titleObserver = new IntersectionObserver(entries=>{
         const entry = entries[0]
         if(entry.isIntersecting){
-            title.current.className = "pl-[5rem] transition-all duration-[1000ms] translate-x-[0] opacity-100 pl-[1rem] font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-[6rem] ps:text-[5.5rem] tp:text-[8rem] tl:text-[6rem] dl:text-[8.5rem]"
+            title.current.className = "pb-[1rem] transition-all duration-[1000ms] translate-x-[0rem] opacity-100 font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-center  ps:text-[1.5rem] p:text-[1.9rem] tp:text-[4rem] tl:text-[4rem] dl:text-[8.5rem]"
             
         }
     },{threshold:0.5})
     titleObserver.observe(title.current)
     
+
+    const illustrationObserver = new IntersectionObserver(entries=>{
+        const entry = entries[0]
+        if(entry.isIntersecting){
+            illustration.current.className = "animate-appearFromDown transition-all duration-500 p:h-[20rem] tp:h-[35rem] tl:h-[35rem] dl:h-[55rem] relative top-[1rem] dl:top-[2rem]"
+            illustrationObserver.unobserve(illustration.current)
+            
+        }
+    },{threshold:0.5})
+    illustrationObserver.observe(illustration.current)
+
+
     const textObserver = new IntersectionObserver(entries=>{
         const entry = entries[0]
         if(entry.isIntersecting){
-            text.current.className = "animate-appearFromDown h-[50rem] absolute left-[5rem] flex flex-col justify-center"
+            text.current.className = "animate-appearFromDown relative flex flex-col justify-center p:w-[20rem] tp:w-[35rem] tl:w-[35rem] dl:w-[55rem]"
             setTimeout(() => {
-                illustration.current.className = "animate-appearFromDown transition-all duration-500 h-[50rem] absolute top-[5rem] right-[5rem]"
+                windows.current.className = "hover:scale-[110%] transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] animate-appearFromDown"
             }, 500);
             setTimeout(() => {
-                windows.current.className = "z-40 transition-all duration-[300ms] relative h-[7rem] animate-appearFromDown"
-            }, 1500);
+                linux.current.className = "hover:scale-[110%] transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-100 animate-appearFromDown"
+            }, 700);
             setTimeout(() => {
-                linux.current.className = "z-30 transition-all duration-[300ms] relative h-[7rem] opacity-100 animate-appearFromDown"
-            }, 1700);
+                apple.current.className = "hover:scale-[110%] transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-100 animate-appearFromDown"
+            }, 900);
             setTimeout(() => {
-                apple.current.className = "z-20 transition-all duration-[300ms] relative h-[7rem] opacity-100 animate-appearFromDown"
-            }, 1900);
-            setTimeout(() => {
-                android.current.className = "z-10 transition-all duration-[300ms] relative h-[7rem] opacity-100 animate-appearFromDown"
-            }, 2100);
+                android.current.className = "hover:scale-[110%] transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-100 animate-appearFromDown"
+            }, 1100);
 
 
 
@@ -66,23 +75,23 @@ const Devices = () => {
 
 
     // Main container
-    <div ref={container} className="h-[70rem]">
+    <div ref={container} className="pb-[5rem]">
         {/* title */}
-        <div ref={title} className="pl-[5rem] transition-all duration-[1000ms] translate-x-[-30rem] opacity-0  font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-[6rem] ps:text-[5.5rem] tp:text-[8rem] tl:text-[6rem] dl:text-[8.5rem]">Supported devices</div>
+        <div ref={title} className="pb-[1rem] transition-all duration-[1000ms] translate-x-[-20vw] opacity-0  font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text  ps:text-[1.5rem] text-center  p:text-[1.9rem] tp:text-[4rem] tl:text-[4rem] dl:text-[8.5rem]">Supported devices</div>
         
         {/* Content container  */}
-        <div className="h-[50rem] flex items-center align-center justify-center relative">
+        <div className="flex flex-col tl:flex-row items-center align-center justify-center relative gap-[0rem] tl:gap-[10rem] dl:gap-[10rem]">
             {/* Illustration */}
-            <img ref={illustration} src="./src/assets/loading.png" className="opacity-0 transition-all duration-500 h-[50rem] absolute top-[5rem] right-[5rem]"></img>
+            <img ref={illustration} src="./src/assets/loading.png" className="opacity-0 transition-all duration-500 p:h-[20rem] tp:h-[35rem] tl:h-[35rem] dl:h-[55rem] relative top-[1rem] dl:top-[2rem]"></img>
             {/* text-container */}
-            <div ref={text} className="opacity-0 h-[50rem] absolute left-[5rem] flex flex-col justify-center">
-                <div className="pb-[3rem] font-semibold w-[45rem] text-[1rem] ps:text-[2.8rem] tp:text-[4rem] tl:text-[3.5rem] dl:text-[3.5rem]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, magnam!</div>
+            <div ref={text} className="opacity-0 border-4 relative tl:top-[10rem] flex flex-col justify-center p:w-[20rem] tp:w-[35rem] tl:w-[35rem] dl:w-[55rem]">
+                <div className="pb-[3rem] font-semibold p:w-[100vw] px-[2rem] tp:w-[70vw] text-center tl:text-start tl:w-[30rem] dl:w-[45rem] ps:text-[1rem] tp:text-[2rem] tl:text-[1.8rem] dl:text-[3.5rem]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, magnam!</div>
                 {/* os container */}
-                <div className="flex gap-[2rem] relative">
-                    <img ref={windows} className="z-40 transition-all duration-[300ms] relative h-[7rem] opacity-0" src="./src/assets/os/windows.png" />
-                    <img ref={linux} className="z-30 transition-all duration-[300ms] relative h-[7rem] opacity-0" src="./src/assets/os/linux.png" />
-                    <img ref={apple} className="z-20 transition-all duration-[300ms] relative h-[7rem] opacity-0" src="./src/assets/os/apple.png" />
-                    <img ref={android} className="z-10 transition-all duration-[300ms] relative h-[7rem] opacity-0" src="./src/assets/os/android.png" />
+                <div className="flex gap-[1rem] tp:gap-[2rem] relative justify-center tl:justify-start px-[2rem]">
+                    <img ref={windows} className="transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./src/assets/os/windows.png" />
+                    <img ref={linux}   className="transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./src/assets/os/linux.png" />
+                    <img ref={apple}   className="transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./src/assets/os/apple.png" />
+                    <img ref={android} className="transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./src/assets/os/android.png" />
                 </div>
             </div>
         </div>

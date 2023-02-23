@@ -8,6 +8,9 @@ import Sponsors from './components/Sponsors';
 import Pricing from './components/Pricing';
 import Albumcovers from './components/Albumcovers';
 import Devices from './components/Devices';
+import Testimonial from './components/Testimonial';
+import Faq from './components/Faq';
+import Contactus from './components/Contactus';
 
 
 function App() {
@@ -26,7 +29,7 @@ function App() {
 
 
   return (
-    <div id="app" ref={appRef} className="app overflow-x-hidden font-[Montserrat]">
+    <div id="app" ref={appRef} className="app overflow-x-hidden font-[Montserrat] bg-[#000e21]">
 
         <Navbar heroRef={heroRef} navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Hero heroRef={heroRef} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
@@ -36,6 +39,10 @@ function App() {
         <Pricing />
         <Albumcovers appRef={appRef}/>
         <Devices />
+        <Testimonial />
+        <Faq />
+        <Contactus />
+
         
 
     </div>

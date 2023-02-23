@@ -52,7 +52,7 @@ const Features = () => {
 
           }
         },
-        {threshold: 0.000000005})
+        {threshold: 0.1})
         leftObserver.observe(card1.current)
 
         const rightObserver = new IntersectionObserver(
@@ -64,7 +64,7 @@ const Features = () => {
               rightRef.current.className = "hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative  pl-[0.8rem] transition-all duration-300 z-10 absolute"
             }
           },
-          {threshold: 0.000000005})
+          {threshold: 0.1})
           rightObserver.observe(card7.current)
 
           const observer1 = new IntersectionObserver(
@@ -83,7 +83,7 @@ const Features = () => {
                 card1.current.children[0].src=""
               }
             },
-            {threshold: 0.000000005})
+            {threshold: 0.1})
             observer1.observe(card1.current)
 
             const observer2 = new IntersectionObserver(
@@ -103,7 +103,7 @@ const Features = () => {
                 card2.current.children[0].src=""
                 }
               },
-              {threshold: 0.000000005})
+              {threshold: 0.1})
               observer2.observe(card2.current)
 
               const observer3 = new IntersectionObserver(
@@ -124,7 +124,7 @@ const Features = () => {
                     card3.current.children[0].src=""
                   }
                 },
-                {threshold: 0.000000005})
+                {threshold: 0.1})
                 observer3.observe(card3.current)
 
                 const observer4 = new IntersectionObserver(
@@ -145,7 +145,7 @@ const Features = () => {
                       card4.current.children[0].src=""
                     }
                   },
-                  {threshold: 0.000000005})
+                  {threshold: 0.1})
                   observer4.observe(card4.current)
 
                   const observer5 = new IntersectionObserver(
@@ -166,7 +166,7 @@ const Features = () => {
                         card5.current.children[0].src=""
                       }
                     },
-                    {threshold: 0.000000005})
+                    {threshold: 0.1})
                     observer5.observe(card5.current)
 
                     const observer6 = new IntersectionObserver(
@@ -187,7 +187,7 @@ const Features = () => {
                             card6.current.children[0].src=""
                         }
                       },
-                      {threshold: 0.000000005})
+                      {threshold: 0.1})
                       observer6.observe(card6.current)
 
                       const observer7 = new IntersectionObserver(
@@ -208,7 +208,7 @@ const Features = () => {
                             card7.current.children[0].src=""
                           }
                         },
-                        {threshold: 0.000000005})
+                        {threshold: 0.1})
                         observer7.observe(card7.current)
 
 
