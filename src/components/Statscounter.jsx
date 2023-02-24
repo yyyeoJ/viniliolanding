@@ -24,18 +24,18 @@ const Statscounter = React.memo((props) => {
             counterRef.current.className = "opacity-100 transition-all duration-1000 flex flex-col tl:flex-row items-center gap-[1rem] dl:gap-[3rem] w-[90vw] justify-center flex-wrap text-white font-bold"
             setTimeout(() => {
               countUp()
-              songsRef.current.className =   "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              songsRef.current.className =   "ds:hover:scale-[105%] opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
             }, 500);
             setTimeout(() => {
-              artistsRef.current.className = "opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              artistsRef.current.className = "ds:hover:scale-[105%] opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               
             }, 650);
             setTimeout(() => {
-              genresRef.current.className =  "opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              genresRef.current.className =  "ds:hover:scale-[105%] opacity-100 animate-appearFromLeft  tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               
             }, 800);
             setTimeout(() => {
-              playlistRef.current.className ="opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
+              playlistRef.current.className ="ds:hover:scale-[105%] opacity-100 animate-appearFromRight tp:animate-appearFromDown transition-all duration-100 flex flex-row tp:flex-col justify-center align-center items-center bg-gradient-to-b from-[#1d3c68] to-[#102139] w-[16rem] tl:w-[11rem] dl:w-[16rem] dl:p-[4rem] shadow-black shadow-md p-[2rem] rounded-xl"
               counterObserver.unobserve(genresRef.current)
               
             }, 950);
@@ -81,7 +81,7 @@ const Statscounter = React.memo((props) => {
 
   return (
 
-    <div className="pointer-events-none w-[99vw] pb-[20vh] pt-[31.5vh] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
+    <div className="w-[99vw] pb-[20vh] pt-[31.5vh] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
 
       <div    ref={counterRef} className="opacity-0 transition-all flex flex-col tl:flex-row gap-[1rem] dl:gap-[3rem] w-[90vw] justify-center items-center flex-wrap text-white font-bold">
 

@@ -70,10 +70,10 @@ const Features = () => {
         entries=>{
           const entry = entries[0]
           if(entry.isIntersecting){
-          leftRef.current.className = "hover:scale-[130%] will-change-transform opacity-100 hidden tl:block transition-all duration-300 relative translate-x-[-5rem] z-10"
+          leftRef.current.className = "ds:hover:scale-[130%] will-change-transform opacity-100 hidden tl:block transition-all duration-300 relative translate-x-[-5rem] z-10"
 
           }else{
-            leftRef.current.className = "hover:scale-[130%] will-change-transform opacity-100 hidden tl:block transition-all duration-300 relative z-10"
+            leftRef.current.className = "ds:hover:scale-[130%] will-change-transform opacity-100 hidden tl:block transition-all duration-300 relative z-10"
 
           }
         },
@@ -84,9 +84,9 @@ const Features = () => {
           entries=>{
             const entry = entries[0]
             if(entry.isIntersecting){
-              rightRef.current.className = "hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative translate-x-[5rem] pl-[0.8rem] transition-all duration-300 z-10 absolute"
+              rightRef.current.className = "ds:hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative translate-x-[5rem] pl-[0.8rem] transition-all duration-300 z-10 absolute"
             }else{
-              rightRef.current.className = "hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative  pl-[0.8rem] transition-all duration-300 z-10 absolute"
+              rightRef.current.className = "ds:hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative  pl-[0.8rem] transition-all duration-300 z-10 absolute"
             }
           },
           {threshold: 0.1})
@@ -244,12 +244,12 @@ const Features = () => {
 
     <>
               {/* main container */}
-              <div id="features" ref={featureRef} className='w-[100vw] flex  flex-col justify-center opacity-0 transition-all duration-1000 h-[50rem]'>
+              <div id="features" ref={featureRef} className='w-[100vw] flex  flex-col justify-center opacity-0 transition-all duration-1000'>
              
               {/* slider container */}
               <div className="flex items-center justify-center align-center w-[100vw] ">
               {/*left arrow */}
-              <div ref={leftRef} onClick={()=>{slideLeft(500)}} className="hover:scale-[130%] will-change-transform opacity-0 translate-x-[-5rem] hidden tl:block transition-all duration-300"><BsChevronLeft  size={40} className="text-white z-10"/></div>
+              <div ref={leftRef} onClick={()=>{slideLeft(500)}} className="ds:hover:scale-[130%] will-change-transform opacity-0 translate-x-[-5rem] hidden tl:block transition-all duration-300"><BsChevronLeft  size={40} className="text-white z-10"/></div>
               {/* slider  */}
               <div id="slider" className=" snap-x snap-mandatory flex flex-row scroll-smooth items-center relative w-[100vw] ps:h-[35rem] tp:h-[50rem] tl:h-[43rem] ds:h-[38rem] dl:h-[55rem] overflow-x-visible overflow-y-hidden">
                 {/* Cards container */}
@@ -266,7 +266,7 @@ const Features = () => {
                 </div>
               </div>
               {/* Right arrow */}
-              <div ref={rightRef} onClick={()=>{slideRight(500)}} className="hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative translate-x-[-1rem] pl-[0.8rem] transition-all duration-300"><BsChevronRight  size={40} className="text-white-500 z-10"/></div>
+              <div ref={rightRef} onClick={()=>{slideRight(500)}} className="ds:hover:scale-[130%] will-change-transform hidden tl:block opacity-100 relative translate-x-[-1rem] pl-[0.8rem] transition-all duration-300"><BsChevronRight  size={40} className="text-white-500 z-10"/></div>
               </div>
 
              {/* dots container */}

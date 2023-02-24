@@ -28,7 +28,7 @@ useEffect(()=>{
             <ul className="text-white hidden ds:flex flex-row gap-5 items-center ">
                 <li>
                     <div className="group h-14 relative top-[5px]">
-                        <div className="animate-appearFromUp cursor-pointer group-hover:bg-[#1d3c68] transition-all duration-300 py-2 px-3 rounded-lg text-xl font-bold tracking-wide">About</div>
+                        <div className="animate-appearFromUp cursor-pointer group-hover:bg-[#1d3c68] hover:scale-[105%] transition-all duration-300 py-2 px-3 rounded-lg text-xl font-bold tracking-wide">About</div>
                         <div className="w-[12rem] translate-y-[-0.5rem] group-hover:translate-y-0 absolute mt-2 opacity-0 flex pointer-events-none flex-col group-hover:pointer-events-auto group-hover:opacity-100 bg-white text-black text-xl rounded-lg p-3 transition-all duration-200 group-hover:duration-500">
                         <a className="hover:underline cursor-pointer">Features</a>
                         <a className="hover:underline cursor-pointer">Supported devices</a>
@@ -38,7 +38,7 @@ useEffect(()=>{
                     </li>
                     <li>
                     <div className="group h-14 relative top-[5px]">
-                        <div className="animate-appearFromUp cursor-pointer group-hover:bg-[#1d3c68] transition-all duration-300 py-2 px-3 rounded-lg text-xl font-bold tracking-wide">Support</div>
+                        <div className="animate-appearFromUp cursor-pointer group-hover:bg-[#1d3c68] hover:scale-[105%] transition-all duration-300 py-2 px-3 rounded-lg text-xl font-bold tracking-wide">Support</div>
                         <div className="w-[12rem] translate-y-[-0.5rem] group-hover:translate-y-0 absolute mt-2 opacity-0 flex pointer-events-none flex-col group-hover:pointer-events-auto group-hover:opacity-100 bg-white text-black text-xl rounded-lg p-3 transition-all duration-200 group-hover:duration-500">
                             <a className="hover:underline cursor-pointer">FAQ</a>
                             <a className="hover:underline cursor-pointer">Supported devices</a>
@@ -46,7 +46,7 @@ useEffect(()=>{
                         </div>
                         </div>
                     </li>           
-                    <li className="animate-appearFromUp cursor-pointer bg-white hover:bg-gray-400 transition-all duration-300 p-2 text-black rounded-lg px-5 text-xl font-bold tracking-wide">Start listening</li>
+                    <li className="animate-appearFromUp cursor-pointer bg-white hover:scale-[105%] transition-all duration-300 p-2 text-black rounded-lg px-5 text-xl font-bold tracking-wide">Start listening</li>
             </ul>
             {/*Mobile nav */}
                 {/*Button */}
