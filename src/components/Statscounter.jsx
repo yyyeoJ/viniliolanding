@@ -81,7 +81,7 @@ const Statscounter = React.memo((props) => {
 
   return (
 
-    <div className="w-[99vw] pb-[20vh] pt-[31.5vh] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
+    <div className="pointer-events-none w-[99vw] pb-[20vh] pt-[31.5vh] bg-[#000e21] border-0 border-blue-500 flex flex-col items-center">
 
       <div    ref={counterRef} className="opacity-0 transition-all flex flex-col tl:flex-row gap-[1rem] dl:gap-[3rem] w-[90vw] justify-center items-center flex-wrap text-white font-bold">
 

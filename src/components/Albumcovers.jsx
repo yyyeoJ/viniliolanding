@@ -117,9 +117,9 @@ function shuffle(array) {
     const coverObserver = new IntersectionObserver(entries=>{
         entries.forEach(entry=>{
             if(entry.isIntersecting){
-                entry.target.className = " opacity-100 z-10 hover:scale-[105%] pointer-events-auto transition-all duration-300 ps:h-[8rem] tp:h-[15rem] shadow-lg rounded-[0.5rem]"
+                entry.target.className = " opacity-100 z-10 ds:hover:scale-[105%] pointer-events-auto transition-all duration-300 ps:h-[8rem] tp:h-[15rem] shadow-lg rounded-[0.5rem]"
             }else{
-                entry.target.className = " opacity-0 transition-all duration-300 ps:h-[8rem] tp:h-[15rem] shadow-lg rounded-[0.5rem]"
+                entry.target.className = " opacity-0 transition-all duration-300 ps:h-[6rem] tp:h-[13rem] shadow-lg rounded-[0.5rem]"
             }
         })
     },{threshold:0.1})
@@ -132,9 +132,9 @@ function shuffle(array) {
 
 
   return (
-        <div ref={albumref} id="albumcovers" className="ps:h-[20rem] tp:h-[40rem] dl:h-[60rem] relative flex items-center overflow-x-scroll will-change-transform pointer-events-none">
+        <div ref={albumref} id="albumcovers" className="ps:h-[20rem] tp:h-[40rem] dl:h-[60rem] relative flex items-center overflow-x-auto will-change-transform pointer-events-none">
             <div className="absolute flex items-center gap-[1rem] ">
-             {images.map((image)=>{return <img key={image} id="cover" className="opacity-0 transition-all duration-300  ps:h-[8rem] tp:h-[15rem] shadow-lg rounded-[0.5rem]" src={image}></img>})}    
+             {images.map((image)=>{return <img key={image} id="cover" className="opacity-0 transition-all duration-300  ps:h-[6rem] tp:h-[13rem] shadow-lg rounded-[0.5rem]" src={image}></img>})}    
             </div>
                 
         </div>

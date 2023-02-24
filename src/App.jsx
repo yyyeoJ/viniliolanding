@@ -24,6 +24,7 @@ function App() {
   
 
 // #000e21
+// #1d3c68
 // #006FFF
 // #203147
 
@@ -31,7 +32,7 @@ function App() {
   return (
     <div id="app" ref={appRef} className="app overflow-x-hidden font-[Montserrat] bg-[#000e21]">
 
-        <Navbar heroRef={heroRef} navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
+        <Navbar appRef={appRef} heroRef={heroRef} navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Hero heroRef={heroRef} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Statscounter/>
         <Features/>

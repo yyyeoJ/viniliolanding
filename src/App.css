@@ -43,15 +43,13 @@ body,
   
 
   
-#slider{
+#slider,#albumcovers{
   -ms-overflow-style: none;
   scrollbar-width: none;
   will-change: transform;
+  scrollbar-width: none;
 }
 #slider::-webkit-scrollbar,#albumcovers::-webkit-scrollbar {
   display: none;
-}
-#devices{
-  animation: none;
 }
 

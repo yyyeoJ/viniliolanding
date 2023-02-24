@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { lazy, useEffect, useRef } from 'react'
 import {BsChevronLeft , BsChevronRight, BsCircle , BsCircleFill} from "react-icons/bs"
 import Card from './Card'
 
@@ -29,12 +29,37 @@ const Features = () => {
  
   useEffect(()=>{
     setTimeout(()=>{
+
+      const lazyloadObserver = new IntersectionObserver(entries=>{
+        const entry = entries[0]
+        if(entry.isIntersecting){
+          card1.current.children[0].src="./src/assets/illustrations/online-world-animate.svg"
+          card2.current.children[0].src="./src/assets/illustrations/composer-music-animate.svg"
+          card3.current.children[0].src="./src/assets/illustrations/user-flow-animate.svg"
+          card4.current.children[0].src="./src/assets/illustrations/analyze-animate.svg"
+          card5.current.children[0].src="./src/assets/illustrations/rock-band-animate.svg"
+          card6.current.children[0].src="./src/assets/illustrations/karaoke-animate.svg"
+          card7.current.children[0].src="./src/assets/illustrations/podcast-audience-animate.svg"
+
+        }else{
+          card1.current.children[0].src="./src/assets/loading.gif"
+          card2.current.children[0].src="./src/assets/loading.gif"
+          card3.current.children[0].src="./src/assets/loading.gif"
+          card4.current.children[0].src="./src/assets/loading.gif"
+          card5.current.children[0].src="./src/assets/loading.gif"
+          card6.current.children[0].src="./src/assets/loading.gif"
+          card7.current.children[0].src="./src/assets/loading.gif"
+        }
+      },{threshold:0.1})
+      lazyloadObserver.observe(featureRef.current)
+
+
       const featureObserver = new IntersectionObserver(
         entries=>{
           const entry = entries[0]
           if(entry.isIntersecting){
-            
-          featureRef.current.className = "animate-appearFromDown w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
+            featureRef.current.className = "will-change-transform animate-appearFromDown w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
+            featureObserver.unobserve(featureRef.current)
           }
         },
         {threshold: 0.6})
@@ -71,7 +96,6 @@ const Features = () => {
             entries=>{
               const entry = entries[0]
               if(entry.isIntersecting){
-              card1.current.children[0].src="./src/assets/illustrations/online-world-animate.svg"
               dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
               dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
               dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -79,8 +103,6 @@ const Features = () => {
               dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
               dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
               dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-              }else{
-                card1.current.children[0].src=""
               }
             },
             {threshold: 0.1})
@@ -90,7 +112,6 @@ const Features = () => {
               entries=>{
                 const entry = entries[0]
                 if(entry.isIntersecting){
-                card2.current.children[0].src="./src/assets/illustrations/composer-music-animate.svg"
                 dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                 dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
                 dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -99,8 +120,6 @@ const Features = () => {
                 dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                 dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
 
-                }else{
-                card2.current.children[0].src=""
                 }
               },
               {threshold: 0.1})
@@ -111,7 +130,6 @@ const Features = () => {
                 entries=>{
                   const entry = entries[0]
                   if(entry.isIntersecting){
-                  card3.current.children[0].src="./src/assets/illustrations/user-flow-animate.svg"
                   dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                   dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                   dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
@@ -120,8 +138,6 @@ const Features = () => {
                   dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                   dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
     
-                  }else{
-                    card3.current.children[0].src=""
                   }
                 },
                 {threshold: 0.1})
@@ -132,7 +148,6 @@ const Features = () => {
                   entries=>{
                     const entry = entries[0]
                     if(entry.isIntersecting){
-                    card4.current.children[0].src="./src/assets/illustrations/analyze-animate.svg"
                     dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                     dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                     dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -141,8 +156,6 @@ const Features = () => {
                     dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                     dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
       
-                    }else{
-                      card4.current.children[0].src=""
                     }
                   },
                   {threshold: 0.1})
@@ -153,7 +166,6 @@ const Features = () => {
                     entries=>{
                       const entry = entries[0]
                       if(entry.isIntersecting){
-                      card5.current.children[0].src="./src/assets/illustrations/rock-band-animate.svg"
                       dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                       dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                       dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -162,8 +174,6 @@ const Features = () => {
                       dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                       dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
         
-                      }else{
-                        card5.current.children[0].src=""
                       }
                     },
                     {threshold: 0.1})
@@ -174,7 +184,6 @@ const Features = () => {
                       entries=>{
                         const entry = entries[0]
                         if(entry.isIntersecting){
-                        card6.current.children[0].src="./src/assets/illustrations/karaoke-animate.svg"
                         dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                         dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                         dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -182,11 +191,9 @@ const Features = () => {
                         dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                         dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
                         dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-          
-                        }else{
-                            card6.current.children[0].src=""
-                        }
-                      },
+        
+                      }
+                    },
                       {threshold: 0.1})
                       observer6.observe(card6.current)
 
@@ -195,7 +202,6 @@ const Features = () => {
                         entries=>{
                           const entry = entries[0]
                           if(entry.isIntersecting){
-                          card7.current.children[0].src="./src/assets/illustrations/podcast-audience-animate.svg"
                           dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                           dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                           dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
@@ -204,8 +210,6 @@ const Features = () => {
                           dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
                           dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
             
-                          }else{
-                            card7.current.children[0].src=""
                           }
                         },
                         {threshold: 0.1})

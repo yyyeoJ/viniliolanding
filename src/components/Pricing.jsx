@@ -100,7 +100,7 @@ const container = useRef()
 
   return (
       //Main container
-      <div className="flex-col ">
+      <div className="flex-col will-change-transform">
         {/* Title */}
         <div ref={title} className="opacity-0 transition-all duration-[700ms] pt-[5rem] ps:pb-[2rem] tp:pb-[5rem] tl:pb-[5rem] ds:pb-[5rem] font-bold  bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-center text-[3rem] ps:text-[2.5rem] tp:text-[5rem] tl:text-[3rem] dl:text-[5.5rem]">Pricing & Plans</div>
         {/* Cards container */}
