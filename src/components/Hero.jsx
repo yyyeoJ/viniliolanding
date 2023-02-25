@@ -24,7 +24,7 @@ useEffect(()=>{
 
   return (
 
-    <div ref={props.heroRef} className="bg-[#000e21] w-[200vw] p:pt-[20vh]  ps:pt-[27vh] tp:pt-[11vh] tl:pt-[20vh] dl:pt-[22vh] flex flex-row ">
+    <div ref={props.heroRef} id="hero" className="bg-[#000e21] w-[200vw] p:pt-[20vh]  ps:pt-[27vh] tp:pt-[11vh] tl:pt-[20vh] dl:pt-[22vh] flex flex-row ">
       
         
     {/* Hero1 */}

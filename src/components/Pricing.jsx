@@ -5,7 +5,7 @@ import {BsCheck} from "react-icons/bs"
 
 
 
-const Pricing = () => {
+const Pricing = (props) => {
 
   const title = useRef()
   const price1desktop = useRef()

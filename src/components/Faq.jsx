@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Question from './Question'
 import {BsFillTriangleFill, BsTriangleFill} from "react-icons/bs"
 
 
-const Faq = () => {
+const Faq = (props) => {
 
 
   const title = useRef()
@@ -12,7 +12,7 @@ const Faq = () => {
     const titleObserver = new IntersectionObserver(entries=>{
       const entry = entries[0]
       if(entry.isIntersecting){
-          title.current.className = "pb-[2rem] dl:pb-[5rem] transition-all duration-[1000ms] translate-x-[0rem] opacity-100 font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-center  ps:text-[3.5rem] p:text-[3.9rem] tp:text-[6rem] tl:text-[6rem] dl:text-[10.5rem]"
+          title.current.className = "pb-[2rem] dl:pb-[5rem] transition-all duration-[1000ms] translate-x-[0rem] opacity-100 font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-center  ps:text-[3.5rem] p:text-[3.9rem] tp:text-[6rem] tp:text-[6rem] dl:text-[10.5rem]"
           
       }
     },{threshold:0.5})
@@ -23,11 +23,11 @@ const Faq = () => {
 
   return (
     // main container
-    <div className="pb-[20rem] tl:pb-[10rem] transition-all duration-500 w-[100vw] bg-[#172d52] relative flex items-center flex-col">
+    <div ref={props.faqRef} className="ps:pt-[5rem] tp:pt-[10rem] tl:pt-[5rem] ds:pt-[5rem] dl:pt-[15rem] tp:pb-[10rem] transition-all duration-300 w-[100vw] bg-[#172d52] relative flex items-center flex-col">
       {/* title */}
-      <div ref={title} className="pb-[5rem] dl:pb-[5rem] transition-all duration-[1000ms] translate-x-[-20vw] opacity-0  font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text  ps:text-[3.5rem] text-center  p:text-[3.9rem] tp:text-[6rem] tl:text-[6rem] dl:text-[10.5rem]">FAQ</div>
+      <div ref={title} className="pb-[5rem] dl:pb-[5rem] transition-all duration-[1000ms] translate-x-[-20vw] opacity-0  font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text  ps:text-[3.5rem] text-center  p:text-[3.9rem] tp:text-[6rem] tp:text-[6rem] dl:text-[10.5rem]">FAQ</div>
       {/* questions container */}
-      <div className="flex flex-col gap-[1rem] tp:gap-[2rem] tl:gap-[1rem] dl:gap-[2rem] transition-all duration-500 items-center align-center justify-center w-[50vw]">
+      <div className="pb-[10rem] flex flex-col gap-[1rem] tp:gap-[2.1rem] tl:gap-[1rem] dl:gap-[2rem] transition-all duration-300 items-center align-center justify-center w-[50vw]">
 
       <Question question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eligendi quam numquam quaerat et dolore eaque fuga enim autem tempore."}/>
       <Question question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum culpa animi et ab ea ducimus."}/>

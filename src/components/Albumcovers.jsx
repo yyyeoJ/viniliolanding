@@ -99,7 +99,7 @@ function shuffle(array) {
     const albumObserver = new IntersectionObserver(entries=>{
         let entry = entries[0]
         if(entry.isIntersecting){
-            app.addEventListener("scroll",handleScroll)
+            props.appRef.current.addEventListener("scroll",handleScroll)
             setTimeout(() => {
                 
                 if(!loaded){

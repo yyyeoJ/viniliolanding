@@ -10,11 +10,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-countup": "^6.4.1",
     "react-dom": "^18.2.0",
-    "react-fit-to-viewport": "^0.1.1",
     "react-icons": "^4.7.1",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "swiper": "^9.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

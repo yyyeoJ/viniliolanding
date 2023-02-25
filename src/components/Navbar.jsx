@@ -18,31 +18,32 @@ useEffect(()=>{
                                      : " will-change-transform bg-gradient-to-b from-[#00204a] to-[#001229] z-40 w-[100vw]  fixed top-0 h-[4rem] flex"}>
         <div className="flex items-center justify-between w-full dl:w-[80%] px-[2rem] mx-auto">
             {/*Logo */}
-            <div onClick={()=>{props.appRef.current.scrollTop = 0}} className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
+            <div  className={props.navbarOpen ? "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF] pointer-events-none" 
                                                                                                                : "flex flex-row items-center cursor-pointer animate-appearFromUp text-[#006FFF]"}>
+            <a className="flex items-center" href='#hero'>
                 
                 <TbVinyl className="w-12 h-12 ml-2 pr-2 "/>
                 <h1 className="font-bold text-2xl tracking-widest bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text">Vinilio</h1>
-            </div>
+            </a></div>
             {/*Desktop Nav */}
             <ul className="text-white hidden ds:flex flex-row gap-5 items-center ">
                 <li>
                     <div className="group h-14 relative top-[5px]">
                         <div className="animate-appearFromUp cursor-pointer group-hover:bg-[#1d3c68] hover:scale-[105%] transition-all duration-300 py-2 px-3 rounded-lg text-xl font-bold tracking-wide">About</div>
-                        <div className="w-[12rem] translate-y-[-0.5rem] group-hover:translate-y-0 absolute mt-2 opacity-0 flex pointer-events-none flex-col group-hover:pointer-events-auto group-hover:opacity-100 bg-white text-black text-xl rounded-lg p-3 transition-all duration-200 group-hover:duration-500">
-                        <a className="hover:underline cursor-pointer">Features</a>
-                        <a className="hover:underline cursor-pointer">Supported devices</a>
-                        <a className="hover:underline cursor-pointer">Pricing</a>
+                        <div className="w-[8rem] translate-y-[-0.5rem] group-hover:translate-y-0 absolute mt-2 opacity-0 flex pointer-events-none flex-col group-hover:pointer-events-auto group-hover:opacity-100 bg-white text-black text-xl rounded-lg p-3 transition-all duration-200 group-hover:duration-500">
+                            <a href='#features' className="hover:underline cursor-pointer">Features</a>
+                            <a href='#pricing' className="hover:underline cursor-pointer">Pricing</a>
+                            <a href='#reviews' className="hover:underline cursor-pointer">Reviews</a>
                         </div>
                     </div>
                     </li>
                     <li>
                     <div className="group h-14 relative top-[5px]">
                         <div className="animate-appearFromUp cursor-pointer group-hover:bg-[#1d3c68] hover:scale-[105%] transition-all duration-300 py-2 px-3 rounded-lg text-xl font-bold tracking-wide">Support</div>
-                        <div className="w-[12rem] translate-y-[-0.5rem] group-hover:translate-y-0 absolute mt-2 opacity-0 flex pointer-events-none flex-col group-hover:pointer-events-auto group-hover:opacity-100 bg-white text-black text-xl rounded-lg p-3 transition-all duration-200 group-hover:duration-500">
-                            <a className="hover:underline cursor-pointer">FAQ</a>
-                            <a className="hover:underline cursor-pointer">Supported devices</a>
-                            <a className="hover:underline cursor-pointer">Contact us</a>
+                        <div className="w-[14rem] translate-y-[-0.5rem] group-hover:translate-y-0 absolute mt-2 opacity-0 flex pointer-events-none flex-col group-hover:pointer-events-auto group-hover:opacity-100 bg-white text-black text-xl rounded-lg p-3 transition-all duration-200 group-hover:duration-500">
+                            <div className="hover:underline cursor-pointer">Supported devices</div>
+                            <div className="hover:underline cursor-pointer">FAQ</div>
+                            <div className="hover:underline cursor-pointer">Contact us</div>
                         </div>
                         </div>
                     </li>           
@@ -70,14 +71,14 @@ useEffect(()=>{
                         <div className={props.navbarOpen ? "transition-all duration-[400ms] ml-2" 
                                                          : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Pricing</div>
                         <div className={props.navbarOpen ? "transition-all duration-[500ms] ml-2" 
-                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Testimonials</div>
+                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Reviews</div>
 
                         <div className={props.navbarOpen ? "pt-2  transition-all duration-[600ms] text-2xl font-bold tracking-wide" 
                                                          : "pt-10 transition-all duration-[200ms] text-2xl font-bold tracking-wide translate-y-[-20rem]"}>Support</div>
                         <div className={props.navbarOpen ? "transition-all duration-[700ms] ml-2 translate-y-0" 
-                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>FAQ</div>
-                        <div className={props.navbarOpen ? "transition-all duration-[800ms]      translate-y-0 ml-2" 
                                                          : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Supported devices</div>
+                        <div className={props.navbarOpen ? "transition-all duration-[800ms]      translate-y-0 ml-2" 
+                                                         : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>FAQ</div>
                         <div className={props.navbarOpen ? "transition-all duration-[900ms]      translate-y-0 ml-2" 
                                                          : "transition-all duration-[400ms] ml-2 translate-y-[-32rem]"}>Contact us</div>
 

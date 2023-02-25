@@ -11,14 +11,16 @@ import Devices from './components/Devices';
 import Testimonial from './components/Testimonial';
 import Faq from './components/Faq';
 import Contactus from './components/Contactus';
+import ImageSlider from './components/ImageSlider';
+import Testimonialcard from './components/Testimonialcard';
 
 
 function App() {
 
-
   const [navbarOpen,setNavbarOpen] = useState(false);
   const [herobuttonClicked,setHerobuttonClicked] = useState(false);
   const appRef = useRef()
+  
   const heroRef = useRef()
 
   
@@ -37,7 +39,7 @@ function App() {
         <Statscounter/>
         <Features/>
         <Sponsors/>
-        <Pricing />
+        <Pricing id="pricing"/>
         <Albumcovers appRef={appRef}/>
         <Devices />
         <Testimonial />

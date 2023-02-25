@@ -1,9 +1,9 @@
 import React, { lazy, useEffect, useRef } from 'react'
-import {BsChevronLeft , BsChevronRight, BsCircle , BsCircleFill} from "react-icons/bs"
+import {BsChevronLeft , BsChevronRight,} from "react-icons/bs"
 import Card from './Card'
 
 
-const Features = () => {
+const Features = (props) => {
 
 
   const card1 = useRef()
@@ -26,7 +26,6 @@ const Features = () => {
   const leftRef = useRef()
   const rightRef = useRef()
   const featureRef = useRef()
- 
   useEffect(()=>{
     setTimeout(()=>{
 
@@ -58,7 +57,7 @@ const Features = () => {
         entries=>{
           const entry = entries[0]
           if(entry.isIntersecting){
-            featureRef.current.className = "will-change-transform animate-appearFromDown w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
+            featureRef.current.className = "will-change-transform opacity-100 w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
             featureObserver.unobserve(featureRef.current)
           }
         },
@@ -96,13 +95,13 @@ const Features = () => {
             entries=>{
               const entry = entries[0]
               if(entry.isIntersecting){
-              dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
-              dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-              dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-              dot4.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-              dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-              dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-              dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
+              dot1.current.className = "transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text"
+              dot2.current.className = "transition-all duration-300 text-[2rem]"
+              dot3.current.className = "transition-all duration-300 text-[2rem]"
+              dot4.current.className = "transition-all duration-300 text-[2rem]"
+              dot5.current.className = "transition-all duration-300 text-[2rem]"
+              dot6.current.className = "transition-all duration-300 text-[2rem]"
+              dot7.current.className = "transition-all duration-300 text-[2rem]"
               }
             },
             {threshold: 0.1})
@@ -112,13 +111,13 @@ const Features = () => {
               entries=>{
                 const entry = entries[0]
                 if(entry.isIntersecting){
-                dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
-                dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                dot4.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
+                dot1.current.className = "transition-all duration-300 text-[2rem]"
+                dot2.current.className = "transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text"
+                dot3.current.className = "transition-all duration-300 text-[2rem]"
+                dot4.current.className = "transition-all duration-300 text-[2rem]"
+                dot5.current.className = "transition-all duration-300 text-[2rem]"
+                dot6.current.className = "transition-all duration-300 text-[2rem]"
+                dot7.current.className = "transition-all duration-300 text-[2rem]"
 
                 }
               },
@@ -130,13 +129,13 @@ const Features = () => {
                 entries=>{
                   const entry = entries[0]
                   if(entry.isIntersecting){
-                  dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                  dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                  dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
-                  dot4.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                  dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                  dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                  dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
+                  dot1.current.className = "transition-all duration-300 text-[2rem]"
+                  dot2.current.className = "transition-all duration-300 text-[2rem]"
+                  dot3.current.className = "transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text"
+                  dot4.current.className = "transition-all duration-300 text-[2rem]"
+                  dot5.current.className = "transition-all duration-300 text-[2rem]"
+                  dot6.current.className = "transition-all duration-300 text-[2rem]"
+                  dot7.current.className = "transition-all duration-300 text-[2rem]"
     
                   }
                 },
@@ -148,13 +147,13 @@ const Features = () => {
                   entries=>{
                     const entry = entries[0]
                     if(entry.isIntersecting){
-                    dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                    dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                    dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                    dot4.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
-                    dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                    dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                    dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
+                    dot1.current.className = "transition-all duration-300 text-[2rem]"
+                    dot2.current.className = "transition-all duration-300 text-[2rem]"
+                    dot3.current.className = "transition-all duration-300 text-[2rem]"
+                    dot4.current.className = "transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text"
+                    dot5.current.className = "transition-all duration-300 text-[2rem]"
+                    dot6.current.className = "transition-all duration-300 text-[2rem]"
+                    dot7.current.className = "transition-all duration-300 text-[2rem]"
       
                     }
                   },
@@ -166,13 +165,13 @@ const Features = () => {
                     entries=>{
                       const entry = entries[0]
                       if(entry.isIntersecting){
-                      dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                      dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                      dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                      dot4.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                      dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
-                      dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                      dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
+                      dot1.current.className = "transition-all duration-300 text-[2rem]"
+                      dot2.current.className = "transition-all duration-300 text-[2rem]"
+                      dot3.current.className = "transition-all duration-300 text-[2rem]"
+                      dot4.current.className = "transition-all duration-300 text-[2rem]"
+                      dot5.current.className = "transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text"
+                      dot6.current.className = "transition-all duration-300 text-[2rem]"
+                      dot7.current.className = "transition-all duration-300 text-[2rem]"
         
                       }
                     },
@@ -184,13 +183,13 @@ const Features = () => {
                       entries=>{
                         const entry = entries[0]
                         if(entry.isIntersecting){
-                        dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                        dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                        dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                        dot4.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                        dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                        dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
-                        dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
+                        dot1.current.className = "transition-all duration-300 text-[2rem]"
+                        dot2.current.className = "transition-all duration-300 text-[2rem]"
+                        dot3.current.className = "transition-all duration-300 text-[2rem]"
+                        dot4.current.className = "transition-all duration-300 text-[2rem]"
+                        dot5.current.className = "transition-all duration-300 text-[2rem]"
+                        dot6.current.className = "transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text"
+                        dot7.current.className = "transition-all duration-300 text-[2rem]"
         
                       }
                     },
@@ -202,13 +201,13 @@ const Features = () => {
                         entries=>{
                           const entry = entries[0]
                           if(entry.isIntersecting){
-                          dot1.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                          dot2.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                          dot3.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                          dot4.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                          dot5.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                          dot6.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"
-                          dot7.current.className = "transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"
+                          dot1.current.className = "transition-all duration-300 text-[2rem]"
+                          dot2.current.className = "transition-all duration-300 text-[2rem]"
+                          dot3.current.className = "transition-all duration-300 text-[2rem]"
+                          dot4.current.className = "transition-all duration-300 text-[2rem]"
+                          dot5.current.className = "transition-all duration-300 text-[2rem]"
+                          dot6.current.className = "transition-all duration-300 text-[2rem]"
+                          dot7.current.className = "transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text"
             
                           }
                         },
@@ -244,7 +243,7 @@ const Features = () => {
 
     <>
               {/* main container */}
-              <div id="features" ref={featureRef} className='w-[100vw] flex  flex-col justify-center opacity-0 transition-all duration-1000'>
+              <div ref={featureRef} className='w-[100vw] flex  flex-col justify-center opacity-0 transition-all duration-1000'>
              
               {/* slider container */}
               <div className="flex items-center justify-center align-center w-[100vw] ">
@@ -270,14 +269,14 @@ const Features = () => {
               </div>
 
              {/* dots container */}
-             <div className="w-[100vw] h-[1rem] tp:hidden flex items-center align-center justify-center gap-[0.5rem]">
-                  <div ref={dot1} className="transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2 bg-white"></div>
-                  <div ref={dot2} className="transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"></div>
-                  <div ref={dot3} className="transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"></div>
-                  <div ref={dot4} className="transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"></div>
-                  <div ref={dot5} className="transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"></div>
-                  <div ref={dot6} className="transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"></div>
-                  <div ref={dot7} className="transition-all duration-300 w-[0.8rem] h-[0.8rem] rounded-full border-2"></div>
+             <div className="w-[100vw] h-[3rem] tp:hidden flex items-center align-center justify-center gap-[0.5rem]">
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7) -200}} ref={dot1} className="transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text">●</div>
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 2) -300}} ref={dot2} className="transition-all duration-300 text-[2rem] ">●</div>
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 3) -300}} ref={dot3} className="transition-all duration-300 text-[2rem] ">●</div>
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 4) -300}} ref={dot4} className="transition-all duration-300 text-[2rem] ">●</div>
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 5) -300}} ref={dot5} className="transition-all duration-300 text-[2rem] ">●</div>
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 6) -300}} ref={dot6} className="transition-all duration-300 text-[2rem] ">●</div>
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 7) -300}} ref={dot7} className="transition-all duration-300 text-[2rem] ">●</div>
                 </div>
           
 
