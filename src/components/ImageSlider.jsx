@@ -78,7 +78,7 @@ const ImageSlider = React.memo((props) => {
         <BsChevronRight size={30} onClick={next}     className="tp:hover:scale-[130%]  transition-all duration-300 z-10 select-none cursor-pointer absolute right-0 top-[50%] translate-y-[-50%]"/>
         
         {/* slides */}
-        <div ref={reviewSlider}   className="rounded-[2rem] select-none flex overflow-scroll pointer-events-none scroll-smooth snap-x snap-mandatory">
+        <div ref={reviewSlider} id="testimonial"  className="rounded-[2rem] select-none flex overflow-scroll pointer-events-none scroll-smooth snap-x snap-mandatory">
             {slides.map((slide,slideIndex)=>(
                  <div id="slide" data-key={slideIndex} key={slideIndex} className="select-none">
                     {slide}

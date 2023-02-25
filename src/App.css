@@ -43,13 +43,13 @@ body,
   
 
   
-#slider,#albumcovers{
+#slider,#albumcovers,#testimonial{
   -ms-overflow-style: none;
   scrollbar-width: none;
   will-change: transform;
   scrollbar-width: none;
 }
-#slider::-webkit-scrollbar,#albumcovers::-webkit-scrollbar {
+#slider::-webkit-scrollbar,#albumcovers::-webkit-scrollbar,#testimonial::-webkit-scrollbar {
   display: none;
 }
 

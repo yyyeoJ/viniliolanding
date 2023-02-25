@@ -22,8 +22,12 @@ function App() {
   const appRef = useRef()
   
   const heroRef = useRef()
-
-  
+  const featureRef = useRef()
+  const pricingRef = useRef()
+  const reviewsRef = useRef()
+  const deviceRef = useRef()
+  const faqRef = useRef()
+  const contactRef = useRef()
 
 // #000e21
 // #1d3c68
@@ -34,17 +38,17 @@ function App() {
   return (
     <div id="app" ref={appRef} className="app overflow-x-hidden font-[Montserrat] bg-[#000e21]">
 
-        <Navbar appRef={appRef} heroRef={heroRef} navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
+        <Navbar contactRef={contactRef} faqRef={faqRef} deviceRef={deviceRef} reviewsRef={reviewsRef} pricingRef={pricingRef} featureRef={featureRef} appRef={appRef} heroRef={heroRef} navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Hero heroRef={heroRef} buttonClicked={herobuttonClicked} setButtonClicked={setHerobuttonClicked}/>
         <Statscounter/>
-        <Features/>
+        <Features featureRef={featureRef}/>
         <Sponsors/>
-        <Pricing id="pricing"/>
+        <Pricing pricingRef={pricingRef}/>
         <Albumcovers appRef={appRef}/>
-        <Devices />
-        <Testimonial />
-        <Faq />
-        <Contactus />
+        <Devices deviceRef={deviceRef}/>
+        <Testimonial reviewsRef={reviewsRef}/>
+        <Faq faqRef={faqRef}/>
+        <Contactus contactRef={contactRef}/>
 
         
 

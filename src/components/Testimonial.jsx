@@ -37,10 +37,10 @@ const Testimonial = React.memo((props) => {
   return (
 
 
-    <div  className="ps:h-[130%] tp:h-[80%] tl:h-[110%] ds:h-[100%] w-[100vw]  bg-[#172d52] relative flex flex-col items-center" >
+    <div ref={props.reviewsRef}  className="ps:h-[130%] tp:h-[80%] tl:h-[110%] ds:h-[100%] w-[100vw]  bg-[#172d52] relative flex flex-col items-center" >
 
         {/* title */}
-        <div id="reviews" ref={title} className=" mb-[5rem] pt-[10rem]  dl:pb-[5rem] transition-all duration-[1000ms] translate-x-[-8rem] opacity-0 font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-center  ps:text-[2rem]  tp:text-[4rem] tl:text-[3rem] dl:text-[5.5rem]">
+        <div ref={title} className=" mb-[5rem] pt-[10rem]  dl:pb-[5rem] transition-all duration-[1000ms] translate-x-[-8rem] opacity-0 font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text text-center  ps:text-[2rem]  tp:text-[4rem] tl:text-[3rem] dl:text-[5.5rem]">
           What our clients say about us</div>
 
         <div ref={container} className="opacity-0 transition-all duration-500 rounded-[3rme]">

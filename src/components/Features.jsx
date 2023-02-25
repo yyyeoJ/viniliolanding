@@ -25,7 +25,6 @@ const Features = (props) => {
  
   const leftRef = useRef()
   const rightRef = useRef()
-  const featureRef = useRef()
   const sliderRef = useRef()
   useEffect(()=>{
     setTimeout(()=>{
@@ -51,19 +50,19 @@ const Features = (props) => {
           card7.current.children[0].src="./src/assets/loading.gif"
         }
       },{threshold:0.1})
-      lazyloadObserver.observe(featureRef.current)
+      lazyloadObserver.observe(props.featureRef.current)
 
 
       const featureObserver = new IntersectionObserver(
         entries=>{
           const entry = entries[0]
           if(entry.isIntersecting){
-            featureRef.current.className = "will-change-transform opacity-100 w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
-            featureObserver.unobserve(featureRef.current)
+            props.featureRef.current.className = "will-change-transform opacity-100 w-[100vw] flex flex-col opacity-100 transition-all duration-1000"
+            featureObserver.unobserve(props.featureRef.current)
           }
         },
         {threshold: 0.6})
-        featureObserver.observe(featureRef.current)
+        featureObserver.observe(props.featureRef.current)
 
 
       const leftObserver = new IntersectionObserver(
@@ -242,7 +241,7 @@ const Features = (props) => {
 
     <>
               {/* main container */}
-              <div ref={featureRef} className='w-[100vw] flex  flex-col justify-center opacity-0 transition-all duration-1000'>
+              <div ref={props.featureRef} className='w-[100vw] flex  flex-col justify-center opacity-0 transition-all duration-1000'>
              
               {/* slider container */}
               <div className="flex items-center justify-center align-center w-[100vw] ">

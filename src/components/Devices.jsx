@@ -56,12 +56,12 @@ const Devices = (props) => {
 
 
     // Main container
-    <div ref={container} className="ps:pb-[5rem] tl:pb-[15rem]">
+    <div ref={props.deviceRef} className="ps:pb-[5rem] tl:pb-[15rem] relative">
         {/* title */}
         <div ref={title} className="ps:pb-[5rem] tp:pb-[10rem] transition-all duration-[1000ms] translate-x-[-20vw] opacity-0  font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text  ps:text-[1.5rem] text-center  p:text-[1.9rem] tp:text-[4rem] tl:text-[4rem] dl:text-[8.5rem]">Supported devices</div>
         
         {/* Content container  */}
-        <div ref={props.devicesRef} className="flex flex-col tl:flex-row items-center align-center justify-center relative">
+        <div ref={container} className="flex flex-col tl:flex-row items-center align-center justify-center relative">
             {/* text-container */}
             <div ref={text} className="opacity-0 items-center relative tl:top-[10rem] flex flex-col justify-center p:w-[20rem] tp:w-[35rem] tl:w-[35rem] dl:w-[55rem]">
                 <div className="pb-[3rem] font-semibold p:w-[80vw]  tp:w-[70vw] text-center tl:w-[30rem] dl:w-[45rem] ps:text-[0.7rem] tp:text-[2rem] tl:text-[1.8rem] dl:text-[3.5rem]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, magnam!</div>
