@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import ImageSlider from './ImageSlider'
 
-const Testimonial = (props) => {
+const Testimonial = React.memo((props) => {
 
 
 
@@ -59,6 +59,6 @@ const Testimonial = (props) => {
     </div>
 
   )
-}
+})
 
 export default Testimonial

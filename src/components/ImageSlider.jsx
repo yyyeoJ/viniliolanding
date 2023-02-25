@@ -18,7 +18,7 @@ const ImageSlider = React.memo((props) => {
 
 
 
-    const slider = useRef()
+    const reviewSlider = useRef()
 
 
     const [currentIndex,setCurrentIndex] = useState(0)
@@ -28,24 +28,24 @@ const ImageSlider = React.memo((props) => {
     const previous = ()=>{
         const isFirstSlide = currentIndex === 0
         const newIndex = isFirstSlide ? slides.length -1 : currentIndex - 1
-        const scrollValue = slider.current.scrollWidth / slides.length
-        slider.current.scrollLeft = newIndex * scrollValue
+        const scrollValue = reviewSlider.current.scrollWidth / slides.length
+        reviewSlider.current.scrollLeft = newIndex * scrollValue
         setCurrentIndex(newIndex)
        
     }
     const next = ()=>{
         const isLastSlide = currentIndex === slides.length -1
         const newIndex = isLastSlide ? 0 : currentIndex + 1
-        const scrollValue = slider.current.scrollWidth / slides.length
-        slider.current.scrollLeft = newIndex * scrollValue
+        const scrollValue = reviewSlider.current.scrollWidth / slides.length
+        reviewSlider.current.scrollLeft = newIndex * scrollValue
         setCurrentIndex(newIndex)
        
     }
     
     const goToSlide = (index)=>{
         setCurrentIndex(index)
-        const scrollValue = slider.current.scrollWidth / slides.length
-        slider.current.scrollLeft = index * scrollValue
+        const scrollValue = reviewSlider.current.scrollWidth / slides.length
+        reviewSlider.current.scrollLeft = index * scrollValue
         
     }
 
@@ -78,7 +78,7 @@ const ImageSlider = React.memo((props) => {
         <BsChevronRight size={30} onClick={next}     className="tp:hover:scale-[130%]  transition-all duration-300 z-10 select-none cursor-pointer absolute right-0 top-[50%] translate-y-[-50%]"/>
         
         {/* slides */}
-        <div ref={slider} id="slider"  className="rounded-[2rem] select-none flex overflow-scroll pointer-events-none scroll-smooth snap-x snap-mandatory">
+        <div ref={reviewSlider}   className="rounded-[2rem] select-none flex overflow-scroll pointer-events-none scroll-smooth snap-x snap-mandatory">
             {slides.map((slide,slideIndex)=>(
                  <div id="slide" data-key={slideIndex} key={slideIndex} className="select-none">
                     {slide}

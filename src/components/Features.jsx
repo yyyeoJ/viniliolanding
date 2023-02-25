@@ -26,6 +26,7 @@ const Features = (props) => {
   const leftRef = useRef()
   const rightRef = useRef()
   const featureRef = useRef()
+  const sliderRef = useRef()
   useEffect(()=>{
     setTimeout(()=>{
 
@@ -223,15 +224,13 @@ const Features = (props) => {
   },[])
  
  
- 
+  
    const slideLeft = (amount)=>{
-     let slider = document.getElementById("slider")
-     slider.scrollLeft -= amount
+     sliderRef.current.scrollLeft -= amount
  
    }
    const slideRight = (amount)=>{
-     let slider = document.getElementById("slider")
-     slider.scrollLeft += amount
+     sliderRef.current.scrollLeft += amount
  
  
    }
@@ -250,7 +249,7 @@ const Features = (props) => {
               {/*left arrow */}
               <div ref={leftRef} onClick={()=>{slideLeft(500)}} className="ds:hover:scale-[130%] will-change-transform opacity-0 translate-x-[-5rem] hidden tl:block transition-all duration-300"><BsChevronLeft  size={40} className="text-white z-10"/></div>
               {/* slider  */}
-              <div id="slider" className=" snap-x snap-mandatory flex flex-row scroll-smooth items-center relative w-[100vw] ps:h-[35rem] tp:h-[50rem] tl:h-[43rem] ds:h-[38rem] dl:h-[55rem] overflow-x-visible overflow-y-hidden">
+              <div id="slider" ref={sliderRef} className=" snap-x snap-mandatory flex flex-row scroll-smooth items-center relative w-[100vw] ps:h-[35rem] tp:h-[50rem] tl:h-[43rem] ds:h-[38rem] dl:h-[55rem] overflow-x-visible overflow-y-hidden">
                 {/* Cards container */}
                 <div className="flex flex-row gap-[1.2rem] absolute left-[40vw] pr-[8rem]">
 
@@ -270,8 +269,8 @@ const Features = (props) => {
 
              {/* dots container */}
              <div className="w-[100vw] h-[3rem] tp:hidden flex items-center align-center justify-center gap-[0.5rem]">
-                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7) -200}} ref={dot1} className="transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text">●</div>
-                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 2) -300}} ref={dot2} className="transition-all duration-300 text-[2rem] ">●</div>
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7) -200}}     ref={dot1} className="transition-all duration-300 text-[2rem] bg-gradient-to-b from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text">●</div>
+                  <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 2) -300,console.log(slider)}} ref={dot2} className="transition-all duration-300 text-[2rem] ">●</div>
                   <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 3) -300}} ref={dot3} className="transition-all duration-300 text-[2rem] ">●</div>
                   <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 4) -300}} ref={dot4} className="transition-all duration-300 text-[2rem] ">●</div>
                   <div onClick={()=>{slider.scrollLeft = (slider.scrollWidth / 7 * 5) -300}} ref={dot5} className="transition-all duration-300 text-[2rem] ">●</div>
