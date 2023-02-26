@@ -9,6 +9,7 @@ const Pricing = (props) => {
 
   const title = useRef()
   const price1desktop = useRef()
+  const price2desktop = useRef()
   const price3desktop = useRef()
   const price1mobile = useRef()
   const price2mobile = useRef()
@@ -38,8 +39,9 @@ const container = useRef()
             if(entry.isIntersecting){
               setTimeout(() => {
                 
-                price1desktop.current.className = "hover:scale-[110%] ps:hidden tl:block transition-all duration-500 tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.5rem] rounded-[1.6rem] bg-gradient-to-r from-[#ff006f] to-[#ff9000]  relative tl:left-[0rem] ds:left-[2rem] dl:left-[0rem] dxl:left-[10rem]"
-                price3desktop.current.className = "hover:scale-[110%] ps:hidden tl:block transition-all duration-500 tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.5rem] rounded-[1.6rem] bg-gradient-to-r from-[#6fff00] to-[#d0ff00] relative  tl:left-[0rem] ds:left-[-2rem] dl:left-[0rem] dxl:left-[-10rem]"
+                price1desktop.current.className = "ds:hover:scale-[110%] ps:hidden tl:block transition-all duration-500 tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.5rem] rounded-[1.6rem] bg-gradient-to-r from-[#ff006f] to-[#ff9000]  relative tl:left-[0rem] ds:left-[2rem] dl:left-[0rem] dxl:left-[10rem]"
+                price2desktop.current.className = "ds:hover:scale-[110%]  ps:hidden tl:block opacity-100 transition-all duration-[700ms] tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.55rem] rounded-[1.6rem] bg-gradient-to-r from-[#006FFF] to-[#00bbff] z-20 relative"
+                price3desktop.current.className = "ds:hover:scale-[110%] ps:hidden tl:block transition-all duration-500 tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.5rem] rounded-[1.6rem] bg-gradient-to-r from-[#6fff00] to-[#d0ff00] relative  tl:left-[0rem] ds:left-[-2rem] dl:left-[0rem] dxl:left-[-10rem]"
               }, 500);
               priceObserver.unobserve(container.current)
               
@@ -107,7 +109,7 @@ const container = useRef()
         <div ref={container} className="transition-all duration-[700ms] opacity-100 tl:opacity-0 w-[100vw] h-full tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] pb-[0rem] flex flex-col tl:flex-row justify-center items-center gap-[1rem] tl:gap-0  ds:gap-[1rem] relative">
         
             {/* Price1 desktop */}
-            <div ref={price1desktop} className="hover:scale-[110%] ps:hidden tl:block opacity-100 transition-all duration-[700ms] tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.55rem] rounded-[1.6rem] bg-gradient-to-r from-[#ff006f] to-[#ff9000]   relative tl:left-[15rem] ds:left-[20rem] dl:left-[35rem] dxl:left-[50rem]">
+            <div ref={price1desktop} className="ps:hidden tl:block opacity-100 transition-all duration-[700ms] tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.55rem] rounded-[1.6rem] bg-gradient-to-r from-[#ff006f] to-[#ff9000]   relative tl:left-[15rem] ds:left-[20rem] dl:left-[35rem] dxl:left-[50rem]">
               <div className="h-full relative  flex flex-col items-start px-[2rem] pt-[1rem]  bg-gradient-to-b from-[#122743] to-[#0b182a] rounded-[1rem]">
                 <div className='pb-[1rem]  w-full ps:text-4xl p:text-5xl tp:text-[4rem] tl:text-[2.2rem] ds:text-[3rem] dl:text-[4rem] pt-[1rem] font-bold bg-gradient-to-r from-[#ff006f] to-[#ff9000] text-transparent bg-clip-text'>Title</div>
                 <div className='ps:pb-[2rem] tp:pb-[5rem] tl:pb-[1rem] dl:pb-[5rem] w-full ps:text-xl p:text-2xl tp:text-[2rem] tl:text-[1.3rem] ds:text-[1.5rem] dl:text-[2.5rem] font-semibold bg-gradient-to-r from-[#ff006f] to-[#ff9000] text-transparent bg-clip-text'>Subtitle goes here</div>
@@ -143,7 +145,7 @@ const container = useRef()
 
 
             {/* Price2 desktop */}
-            <div className="hover:scale-[110%] ps:hidden tl:block opacity-100 transition-all duration-[700ms] tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.55rem] rounded-[1.6rem] bg-gradient-to-r from-[#006FFF] to-[#00bbff] z-20 relative">
+            <div ref={price2desktop} className=" ps:hidden tl:block opacity-100 transition-all duration-[700ms] tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.55rem] rounded-[1.6rem] bg-gradient-to-r from-[#006FFF] to-[#00bbff] z-20 relative">
               <div className="h-full relative  flex flex-col items-start px-[2rem] pt-[1rem]  bg-gradient-to-b from-[#122743] to-[#0b182a] rounded-[1rem]">
                 <div className='pb-[1rem]  w-full ps:text-4xl p:text-5xl tp:text-[4rem] tl:text-[2.2rem] ds:text-[3rem] dl:text-[4rem] pt-[1rem] font-bold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Title</div>
                 <div className='ps:pb-[2rem] tp:pb-[5rem] tl:pb-[1rem] dl:pb-[5rem] w-full ps:text-xl p:text-2xl tp:text-[2rem] tl:text-[1.3rem] ds:text-[1.5rem] dl:text-[2.5rem]  font-semibold bg-gradient-to-r from-[#006FFF] to-[#00bbff] text-transparent bg-clip-text'>Subtitle goes here</div>
@@ -179,7 +181,7 @@ const container = useRef()
 
 
             {/* Price3 desktop */}
-            <div ref={price3desktop} className="hover:scale-[110%] ps:hidden tl:block opacity-100 transition-all duration-[700ms] tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.55rem] rounded-[1.6rem] bg-gradient-to-r from-[#6fff00] to-[#d0ff00] relative tl:left-[-15rem] ds:left-[-20rem] dl:left-[-35rem] dxl:left-[-50rem]">
+            <div ref={price3desktop} className=" ps:hidden tl:block opacity-100 transition-all duration-[700ms] tl:w-[20rem] ds:w-[24rem] dl:w-[35rem] tp:h-[46rem] tl:h-[35rem] ds:h-[30rem] dl:h-[50rem] mx-auto p-[0.55rem] rounded-[1.6rem] bg-gradient-to-r from-[#6fff00] to-[#d0ff00] relative tl:left-[-15rem] ds:left-[-20rem] dl:left-[-35rem] dxl:left-[-50rem]">
               <div className="h-full relative  flex flex-col items-start px-[2rem] pt-[1rem]  bg-gradient-to-b from-[#122743] to-[#0b182a] rounded-[1rem]">
                 <div className='pb-[1rem]  w-full ps:text-4xl p:text-5xl tp:text-[4rem] tl:text-[2.2rem] ds:text-[3rem] dl:text-[4rem] pt-[1rem] font-bold bg-gradient-to-r from-[#6fff00] to-[#d0ff00] text-transparent bg-clip-text'>Title</div>
                 <div className='ps:pb-[2rem] tp:pb-[5rem] tl:pb-[1rem] dl:pb-[5rem] w-full ps:text-xl p:text-2xl tp:text-[2rem] tl:text-[1.3rem] ds:text-[1.5rem] dl:text-[2.5rem]  font-semibold bg-gradient-to-r from-[#6fff00] to-[#d0ff00] text-transparent bg-clip-text'>Subtitle goes here</div>
