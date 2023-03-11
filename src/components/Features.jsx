@@ -32,22 +32,22 @@ const Features = (props) => {
       const lazyloadObserver = new IntersectionObserver(entries=>{
         const entry = entries[0]
         if(entry.isIntersecting){
-          card1.current.children[0].src="./public/assets/illustrations/online-world-animate.svg"
-          card2.current.children[0].src="./public/assets/illustrations/composer-music-animate.svg"
-          card3.current.children[0].src="./public/assets/illustrations/user-flow-animate.svg"
-          card4.current.children[0].src="./public/assets/illustrations/analyze-animate.svg"
-          card5.current.children[0].src="./public/assets/illustrations/rock-band-animate.svg"
-          card6.current.children[0].src="./public/assets/illustrations/karaoke-animate.svg"
-          card7.current.children[0].src="./public/assets/illustrations/podcast-audience-animate.svg"
+          card1.current.children[0].src="/assets/illustrations/online-world-animate.svg"
+          card2.current.children[0].src="/assets/illustrations/composer-music-animate.svg"
+          card3.current.children[0].src="/assets/illustrations/user-flow-animate.svg"
+          card4.current.children[0].src="/assets/illustrations/analyze-animate.svg"
+          card5.current.children[0].src="/assets/illustrations/rock-band-animate.svg"
+          card6.current.children[0].src="/assets/illustrations/karaoke-animate.svg"
+          card7.current.children[0].src="/assets/illustrations/podcast-audience-animate.svg"
 
         }else{
-          card1.current.children[0].src="./public/assets/loading.gif"
-          card2.current.children[0].src="./public/assets/loading.gif"
-          card3.current.children[0].src="./public/assets/loading.gif"
-          card4.current.children[0].src="./public/assets/loading.gif"
-          card5.current.children[0].src="./public/assets/loading.gif"
-          card6.current.children[0].src="./public/assets/loading.gif"
-          card7.current.children[0].src="./public/assets/loading.gif"
+          card1.current.children[0].src="/assets/loading.gif"
+          card2.current.children[0].src="/assets/loading.gif"
+          card3.current.children[0].src="/assets/loading.gif"
+          card4.current.children[0].src="/assets/loading.gif"
+          card5.current.children[0].src="/assets/loading.gif"
+          card6.current.children[0].src="/assets/loading.gif"
+          card7.current.children[0].src="/assets/loading.gif"
         }
       },{threshold:0.1})
       lazyloadObserver.observe(props.featureRef.current)

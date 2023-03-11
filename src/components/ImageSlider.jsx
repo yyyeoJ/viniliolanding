@@ -8,11 +8,11 @@ const ImageSlider = React.memo((props) => {
 
 
     const slides = [
-        <Testimonialcard  userName={"Vinilio user"} user={"./public/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
-        <Testimonialcard  userName={"Vinilio user"} user={"./public/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
-        <Testimonialcard  userName={"Vinilio user"} user={"./public/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
-        <Testimonialcard  userName={"Vinilio user"} user={"./public/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
-        <Testimonialcard  userName={"Vinilio user"} user={"./public/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
+        <Testimonialcard  userName={"Vinilio user"} user={"/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
+        <Testimonialcard  userName={"Vinilio user"} user={"/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
+        <Testimonialcard  userName={"Vinilio user"} user={"/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
+        <Testimonialcard  userName={"Vinilio user"} user={"/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
+        <Testimonialcard  userName={"Vinilio user"} user={"/assets/user.png"} quote={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque obcaecati minus eos reiciendis repellendus ipsum, incidunt facere deleniti id?"}/>,
     ]
 
 
