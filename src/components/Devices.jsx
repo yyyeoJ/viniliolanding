@@ -67,10 +67,10 @@ const Devices = (props) => {
                 <div className="pb-[3rem] font-semibold p:w-[80vw]  tp:w-[70vw] text-center tl:w-[30rem] dl:w-[45rem] ps:text-[0.7rem] tp:text-[2rem] tl:text-[1.8rem] dl:text-[3.5rem]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, magnam!</div>
                 {/* os container */}
                 <div className="flex gap-[1rem] tp:gap-[2rem] relative justify-center tl:justify-start px-[2rem]">
-                    <img ref={windows} className="rotate-180 transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./src/assets/os/windows.png" />
-                    <img ref={linux}   className="rotate-180 transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./src/assets/os/linux.png" />
-                    <img ref={apple}   className="rotate-180 transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./src/assets/os/apple.png" />
-                    <img ref={android} className="rotate-180 transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./src/assets/os/android.png" />
+                    <img ref={windows} className="rotate-180 transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./public/assets/os/windows.png" />
+                    <img ref={linux}   className="rotate-180 transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./public/assets/os/linux.png" />
+                    <img ref={apple}   className="rotate-180 transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./public/assets/os/apple.png" />
+                    <img ref={android} className="rotate-180 transition-all duration-[300ms] relative ps:h-[2rem] p:h-[3rem] tp:h-[5rem] dl:h-[7rem] opacity-0" src="./public/assets/os/android.png" />
                 </div>
             </div>
         </div>

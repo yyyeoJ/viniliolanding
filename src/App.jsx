@@ -48,7 +48,7 @@ function App() {
         <Devices deviceRef={deviceRef}/>
         <Testimonial reviewsRef={reviewsRef}/>
         <Faq faqRef={faqRef}/>
-        <Contactus contactRef={contactRef}/>
+        <Contactus contactRef={contactRef}ö/>
 
         
 
